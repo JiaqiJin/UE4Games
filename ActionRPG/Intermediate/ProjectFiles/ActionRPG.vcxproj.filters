@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRPG.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{342C1447-ECEA-4FB6-83C1-08F7C404AB49}</UniqueIdentifier>
+      <UniqueIdentifier>{C1B1E9C1-2DD4-48B7-96E8-58C9B05181B9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRPG.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{2B2B60C1-2C89-479B-BBA9-25586258E8FF}</UniqueIdentifier>
+      <UniqueIdentifier>{4F487532-B872-40B5-AE14-BB8FB02F9F46}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRPG">
-      <UniqueIdentifier>{0955A901-9E4C-47D6-BDB0-9FCDBCF5D659}</UniqueIdentifier>
+      <UniqueIdentifier>{D2319C16-DD3F-48ED-8183-8FAC94C0F15C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRPG\ActionRPG.Build.cs">
       <Filter>Source\ActionRPG</Filter>
@@ -41,8 +41,17 @@
     <ClInclude Include="..\..\Source\ActionRPG\ActionRPGGameModeBase.h">
       <Filter>Source\ActionRPG</Filter>
     </ClInclude>
+    <Filter Include="Source\ActionRPG\GameMode">
+      <UniqueIdentifier>{70C46B27-5655-4D5C-8AED-8901E9323EBE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ActionRPG\GameMode\PlayerGameModeBase.cpp">
+      <Filter>Source\ActionRPG\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\GameMode\PlayerGameModeBase.h">
+      <Filter>Source\ActionRPG\GameMode</Filter>
+    </ClInclude>
     <Filter Include="Source\ActionRPG\PlayerController">
-      <UniqueIdentifier>{F25701B0-A242-478F-9E86-A53C99D68D2C}</UniqueIdentifier>
+      <UniqueIdentifier>{290AA8B7-59ED-4172-9929-5B6518E26703}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerCharacter.cpp">
       <Filter>Source\ActionRPG\PlayerController</Filter>

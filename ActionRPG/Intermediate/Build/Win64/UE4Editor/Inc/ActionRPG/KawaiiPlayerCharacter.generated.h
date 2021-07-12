@@ -58,7 +58,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AKawaiiPlayerCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AKawaiiPlayerCharacter)
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AbilitySystemComponent() { return STRUCT_OFFSET(AKawaiiPlayerCharacter, AbilitySystemComponent); }
+
+
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_13_PROLOG
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

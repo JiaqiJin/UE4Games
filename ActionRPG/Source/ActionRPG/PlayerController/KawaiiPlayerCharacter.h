@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-//#include "AbilitySystemInterface.h"
-//#include "AbilitySystemComponent.h"
-//#include "Abilities/GameplayAbility.h"
+#include "AbilitySystemInterface.h"
+#include "AbilitySystemComponent.h"
+#include "Abilities/GameplayAbility.h"
 
 #include "KawaiiPlayerCharacter.generated.h"
 
@@ -30,8 +30,28 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+public:
+	// Camera boom positioning the camera behind the player
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"));
+	class USpringArmComponent* CameraBoom;
+
+	// Follow camera
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"));
+	class UCameraComponent* FollowCamera;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera);
+	float BaseTurnRate;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera);
+	float BaseLookUpRate;
+
+public:
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
+
 private:
 
-	/*UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character/Hablities")
-	UAbilitySystemComponent* AbilitySystemComponenet;*/
+	UPROPERTY(VisibleAnywhere, Category = "Character")
+	UAbilitySystemComponent* AbilitySystemComponent;
+
+
 };
