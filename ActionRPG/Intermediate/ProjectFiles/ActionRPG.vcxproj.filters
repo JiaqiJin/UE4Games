@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ActionRPG.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{342C1447-ECEA-4FB6-83C1-08F7C404AB49}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ActionRPG.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ActionRPGEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2B2B60C1-2C89-479B-BBA9-25586258E8FF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ActionRPG">
+      <UniqueIdentifier>{0955A901-9E4C-47D6-BDB0-9FCDBCF5D659}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ActionRPG\ActionRPG.Build.cs">
+      <Filter>Source\ActionRPG</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ActionRPG\ActionRPG.cpp">
+      <Filter>Source\ActionRPG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\ActionRPG.h">
+      <Filter>Source\ActionRPG</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ActionRPG\ActionRPGGameModeBase.cpp">
+      <Filter>Source\ActionRPG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\ActionRPGGameModeBase.h">
+      <Filter>Source\ActionRPG</Filter>
+    </ClInclude>
+    <Filter Include="Source\ActionRPG\PlayerController">
+      <UniqueIdentifier>{F25701B0-A242-478F-9E86-A53C99D68D2C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerCharacter.cpp">
+      <Filter>Source\ActionRPG\PlayerController</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerCharacter.h">
+      <Filter>Source\ActionRPG\PlayerController</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

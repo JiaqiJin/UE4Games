@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ActionRPG",
+			"Path": "E:\\Unreal\\ARPG\\ActionRPG\\Source\\ActionRPG.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ActionRPGEditor",
+			"Path": "E:\\Unreal\\ARPG\\ActionRPG\\Source\\ActionRPGEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Unreal\\ARPG\\ActionRPG\\Source\\ActionRPG\\ActionRPG.Build.cs",
+		"E:\\Unreal\\ARPG\\ActionRPG\\Source\\ActionRPG.Target.cs",
+		"E:\\Unreal\\ARPG\\ActionRPG\\Source\\ActionRPGEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}
