@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRPG.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C1B1E9C1-2DD4-48B7-96E8-58C9B05181B9}</UniqueIdentifier>
+      <UniqueIdentifier>{C5A83D09-D662-4847-8DEA-C54C5176A796}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRPG.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{4F487532-B872-40B5-AE14-BB8FB02F9F46}</UniqueIdentifier>
+      <UniqueIdentifier>{58F09987-96D8-43FB-BDA4-6374E5BC1578}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRPG">
-      <UniqueIdentifier>{D2319C16-DD3F-48ED-8183-8FAC94C0F15C}</UniqueIdentifier>
+      <UniqueIdentifier>{27D18DE0-8E2E-4270-993D-5EC60406C3AF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRPG\ActionRPG.Build.cs">
       <Filter>Source\ActionRPG</Filter>
@@ -42,7 +42,7 @@
       <Filter>Source\ActionRPG</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRPG\GameMode">
-      <UniqueIdentifier>{70C46B27-5655-4D5C-8AED-8901E9323EBE}</UniqueIdentifier>
+      <UniqueIdentifier>{00CA8CE0-7733-485B-A523-137F09D76013}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRPG\GameMode\PlayerGameModeBase.cpp">
       <Filter>Source\ActionRPG\GameMode</Filter>
@@ -50,13 +50,28 @@
     <ClInclude Include="..\..\Source\ActionRPG\GameMode\PlayerGameModeBase.h">
       <Filter>Source\ActionRPG\GameMode</Filter>
     </ClInclude>
+    <Filter Include="Source\ActionRPG\HUD">
+      <UniqueIdentifier>{A2135305-EA5E-4565-963F-3F553FB863BE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ActionRPG\HUD\PlayerHUD.cpp">
+      <Filter>Source\ActionRPG\HUD</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\HUD\PlayerHUD.h">
+      <Filter>Source\ActionRPG\HUD</Filter>
+    </ClInclude>
     <Filter Include="Source\ActionRPG\PlayerController">
-      <UniqueIdentifier>{290AA8B7-59ED-4172-9929-5B6518E26703}</UniqueIdentifier>
+      <UniqueIdentifier>{1E8781B0-B898-48CE-A3A8-6A2FD9137E0A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerCharacter.cpp">
       <Filter>Source\ActionRPG\PlayerController</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerCharacter.h">
+      <Filter>Source\ActionRPG\PlayerController</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerController.cpp">
+      <Filter>Source\ActionRPG\PlayerController</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRPG\PlayerController\KawaiiPlayerController.h">
       <Filter>Source\ActionRPG\PlayerController</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,21 +19,10 @@ public:
 	// Sets default values for this character's properties
 	AKawaiiPlayerCharacter();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 public:
 	// Camera boom positioning the camera behind the player
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"));
-	class USpringArmComponent* CameraBoom;
+	class USpringArmComponent* SpringArm;
 
 	// Follow camera
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"));
@@ -48,10 +37,33 @@ public:
 public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
 
+	// Move forward/back
+	void MoveForward(float value);
+	// Move Side
+	void MoveRight(float value);
+
+	void TurnAtRate(float Rate);
+
+	void LookUpAtRate(float Rate);
+
+	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return SpringArm; }
+	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
 private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Character")
-	UAbilitySystemComponent* AbilitySystemComponent;
+		UAbilitySystemComponent* AbilitySystemComponent;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 
 };

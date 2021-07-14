@@ -1,22 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Unreal\ARPG).
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Binaries\Win64\UE4Editor-ActionRPG-0002.dll
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Binaries\Win64\UE4Editor-ActionRPG-0003.dll
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Binaries\Win64\UE4Editor-ActionRPG-0004.dll
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Binaries\Win64\UE4Editor-ActionRPG-0005.dll
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Binaries\Win64\UE4Editor-ActionRPG-0006.dll
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0002.lib
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0003.lib
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0004.lib
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0005.lib
-  Deleted hot-reload file: E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0006.lib
   Building ActionRPGEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 12 processes...
     [1/4] KawaiiPlayerCharacter.cpp
-    [2/4] UE4Editor-ActionRPG.lib
-       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG.exp
-    [3/4] UE4Editor-ActionRPG.dll
-       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG.suppressed.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG.suppressed.exp
+    [2/4] UE4Editor-ActionRPG-0015.lib
+       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0015.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0015.exp
+    [3/4] UE4Editor-ActionRPG-0015.dll
+       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0015.suppressed.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0015.suppressed.exp
     [4/4] ActionRPGEditor.target
-  Total time in Parallel executor: 4,16 seconds
-  Total execution time: 4,75 seconds
+  Total time in Parallel executor: 4,68 seconds
+  Total execution time: 5,45 seconds

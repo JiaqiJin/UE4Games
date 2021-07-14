@@ -5,3 +5,10 @@ E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatR
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Inc\ActionRPG\PlayerGameModeBase.generated.h
+E:\Unreal\ARPG\ActionRPG\Source\ActionRPG/HUD/PlayerHUD.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Inc\ActionRPG\PlayerHUD.generated.h
