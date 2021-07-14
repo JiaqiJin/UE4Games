@@ -230,11 +230,11 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Inc\ActionRPG
-/I E:\Unreal\ARPG\ActionRPG\Source
 /I ..\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities
 /I ..\Plugins\Runtime\GameplayAbilities\Source
 /I ..\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public
+/I E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Inc\ActionRPG
+/I E:\Unreal\ARPG\ActionRPG\Source
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MRMesh

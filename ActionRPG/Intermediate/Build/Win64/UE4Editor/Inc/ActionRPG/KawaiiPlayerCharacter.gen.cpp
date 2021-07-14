@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 	UPackage* Z_Construct_UPackage__Script_ActionRPG();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+	ACTIONRPG_API UClass* Z_Construct_UClass_UPlayerAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 // End Cross Module References
 	void AKawaiiPlayerCharacter::StaticRegisterNativesAKawaiiPlayerCharacter()
@@ -50,6 +51,10 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseLookUpRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerAttributeComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerAttributeComponent;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
 #endif
@@ -106,6 +111,14 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AKawaiiPlayerCharacter, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_BaseLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_BaseLookUpRate_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent_MetaData[] = {
+		{ "Category", "CharacterBase" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "PlayerController/KawaiiPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent = { "PlayerAttributeComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AKawaiiPlayerCharacter, PlayerAttributeComponent), Z_Construct_UClass_UPlayerAttributeSet_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
 		{ "Category", "Character" },
 		{ "EditInline", "true" },
@@ -118,6 +131,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_BaseLookUpRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_AbilitySystemComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::StaticCppClassTypeInfo = {
@@ -147,7 +161,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AKawaiiPlayerCharacter, 3818041757);
+	IMPLEMENT_CLASS(AKawaiiPlayerCharacter, 1911127499);
 	template<> ACTIONRPG_API UClass* StaticClass<AKawaiiPlayerCharacter>()
 	{
 		return AKawaiiPlayerCharacter::StaticClass();

@@ -34,6 +34,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera);
 	float BaseLookUpRate;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "CharacterBase");
+	class UPlayerAttributeSet* PlayerAttributeComponent;
+
 public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
 

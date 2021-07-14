@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/World.h"
 #include "Components/CapsuleComponent.h"
+#include "ActionRPG/Attributes/PlayerAttributeSet.h"
 
 // Sets default values
 AKawaiiPlayerCharacter::AKawaiiPlayerCharacter()
@@ -16,6 +17,7 @@ AKawaiiPlayerCharacter::AKawaiiPlayerCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	PlayerAttributeComponent = CreateDefaultSubobject<UPlayerAttributeSet>(TEXT("PlayerAttributeComponent"));
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(GetRootComponent());

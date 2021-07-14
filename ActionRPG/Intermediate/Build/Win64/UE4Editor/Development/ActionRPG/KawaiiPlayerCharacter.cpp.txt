@@ -84,3 +84,5 @@ E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/Capsule
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+E:\Unreal\ARPG\ActionRPG\Source\ActionRPG/Attributes/PlayerAttributeSet.h
+E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Inc\ActionRPG\PlayerAttributeSet.generated.h
