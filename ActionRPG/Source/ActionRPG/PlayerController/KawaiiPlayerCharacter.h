@@ -9,9 +9,9 @@
 #include "Abilities/GameplayAbility.h"
 
 #include "KawaiiPlayerCharacter.generated.h"
-
+// https://www.tomlooman.com/stanford-cs193u/
 UCLASS()
-class ACTIONRPG_API AKawaiiPlayerCharacter : public ACharacter
+class ACTIONRPG_API AKawaiiPlayerCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -68,5 +68,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
+	UFUNCTION()
+	void OnPlayerMovementSpeedChanged(float MovementValue);
 };

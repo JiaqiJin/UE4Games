@@ -21,9 +21,55 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ACTIONRPG_API UClass* Z_Construct_UClass_UPlayerAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AKawaiiPlayerCharacter::execOnPlayerMovementSpeedChanged)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_MovementValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnPlayerMovementSpeedChanged(Z_Param_MovementValue);
+		P_NATIVE_END;
+	}
 	void AKawaiiPlayerCharacter::StaticRegisterNativesAKawaiiPlayerCharacter()
 	{
+		UClass* Class = AKawaiiPlayerCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnPlayerMovementSpeedChanged", &AKawaiiPlayerCharacter::execOnPlayerMovementSpeedChanged },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics
+	{
+		struct KawaiiPlayerCharacter_eventOnPlayerMovementSpeedChanged_Parms
+		{
+			float MovementValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::NewProp_MovementValue = { "MovementValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(KawaiiPlayerCharacter_eventOnPlayerMovementSpeedChanged_Parms, MovementValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::NewProp_MovementValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerController/KawaiiPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKawaiiPlayerCharacter, nullptr, "OnPlayerMovementSpeedChanged", nullptr, nullptr, sizeof(KawaiiPlayerCharacter_eventOnPlayerMovementSpeedChanged_Parms), Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AKawaiiPlayerCharacter_NoRegister()
 	{
@@ -32,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 	struct Z_Construct_UClass_AKawaiiPlayerCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -60,6 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -67,11 +115,16 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_ActionRPG,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AKawaiiPlayerCharacter_OnPlayerMovementSpeedChanged, "OnPlayerMovementSpeedChanged" }, // 3958843705
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "// https://www.tomlooman.com/stanford-cs193u/\n" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "PlayerController/KawaiiPlayerCharacter.h" },
 		{ "ModuleRelativePath", "PlayerController/KawaiiPlayerCharacter.h" },
+		{ "ToolTip", "https:www.tomlooman.com/stanford-cs193u/" },
 	};
 #endif
 #if WITH_METADATA
@@ -134,6 +187,9 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_PlayerAttributeComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::NewProp_AbilitySystemComponent,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AKawaiiPlayerCharacter, IAbilitySystemInterface), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AKawaiiPlayerCharacter>::IsAbstract,
 	};
@@ -142,13 +198,13 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AKawaiiPlayerCharacter_Statics::Class_MetaDataParams))
 	};
@@ -161,7 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeKawaiiPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AKawaiiPlayerCharacter, 1911127499);
+	IMPLEMENT_CLASS(AKawaiiPlayerCharacter, 1370866985);
 	template<> ACTIONRPG_API UClass* StaticClass<AKawaiiPlayerCharacter>()
 	{
 		return AKawaiiPlayerCharacter::StaticClass();

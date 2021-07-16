@@ -14,15 +14,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ACTIONRPG_KawaiiPlayerCharacter_generated_h
 
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_SPARSE_DATA
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
+
+
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
+
+
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAKawaiiPlayerCharacter(); \
 	friend struct Z_Construct_UClass_AKawaiiPlayerCharacter_Statics; \
 public: \
 	DECLARE_CLASS(AKawaiiPlayerCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ActionRPG"), NO_API) \
-	DECLARE_SERIALIZER(AKawaiiPlayerCharacter)
+	DECLARE_SERIALIZER(AKawaiiPlayerCharacter) \
+	virtual UObject* _getUObject() const override { return const_cast<AKawaiiPlayerCharacter*>(this); }
 
 
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS \
@@ -31,7 +40,8 @@ private: \
 	friend struct Z_Construct_UClass_AKawaiiPlayerCharacter_Statics; \
 public: \
 	DECLARE_CLASS(AKawaiiPlayerCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ActionRPG"), NO_API) \
-	DECLARE_SERIALIZER(AKawaiiPlayerCharacter)
+	DECLARE_SERIALIZER(AKawaiiPlayerCharacter) \
+	virtual UObject* _getUObject() const override { return const_cast<AKawaiiPlayerCharacter*>(this); }
 
 
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_STANDARD_CONSTRUCTORS \

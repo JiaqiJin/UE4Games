@@ -28,19 +28,19 @@ AKawaiiPlayerCharacter::AKawaiiPlayerCharacter()
 	FollowCamera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false; // Let camera boom to match the controller orientation
 
-	BaseTurnRate = 45.f;
-	BaseLookUpRate = 45.f;
+	//BaseTurnRate = 45.f;
+	//BaseLookUpRate = 45.f;
 
-	// Dont rotate when the controller rotate
-	bUseControllerRotationYaw = false;
-	bUseControllerRotationPitch = false;
-	bUseControllerRotationRoll = false;
+	//// Dont rotate when the controller rotate
+	//bUseControllerRotationYaw = false;
+	//bUseControllerRotationPitch = false;
+	//bUseControllerRotationRoll = false;
 
-	// Turn direction
-	GetCharacterMovement()->bOrientRotationToMovement = true;
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 545.f, 0.0f);
-	GetCharacterMovement()->JumpZVelocity = 650.f;
-	GetCharacterMovement()->AirControl = 0.2f;
+	//// Turn direction
+	//GetCharacterMovement()->bOrientRotationToMovement = true;
+	//GetCharacterMovement()->RotationRate = FRotator(0.0f, 545.f, 0.0f);
+	//GetCharacterMovement()->JumpZVelocity = 650.f;
+	//GetCharacterMovement()->AirControl = 0.2f;
 }
 
 // Called when the game starts or when spawned
@@ -48,6 +48,7 @@ void AKawaiiPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	PlayerAttributeComponent->OnPlayerMovementSpeedChanged.AddDynamic(this, &AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged);
 }
 
 // Called every frame
@@ -84,6 +85,15 @@ UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() con
 	return nullptr;
 }
 
+void AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged(float MovementValue)
+{
+	if (MovementValue < 0)
+		return;
+
+	GetCharacterMovement()->MaxWalkSpeed = MovementValue;
+}
+
+
 void AKawaiiPlayerCharacter::MoveForward(float value)
 {
 	if (Controller != nullptr && value != 0.f)
@@ -118,3 +128,4 @@ void AKawaiiPlayerCharacter::LookUpAtRate(float Rate)
 {
 
 }
+

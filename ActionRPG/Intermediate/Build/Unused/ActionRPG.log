@@ -3,10 +3,10 @@
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 12 processes...
     [1/4] KawaiiPlayerCharacter.cpp
-    [2/4] UE4Editor-ActionRPG-0008.lib
-       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0008.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0008.exp
-    [3/4] UE4Editor-ActionRPG-0008.dll
-       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0008.suppressed.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0008.suppressed.exp
+    [2/4] UE4Editor-ActionRPG-0012.lib
+       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0012.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0012.exp
+    [3/4] UE4Editor-ActionRPG-0012.dll
+       Creating library E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0012.suppressed.lib and object E:\Unreal\ARPG\ActionRPG\Intermediate\Build\Win64\UE4Editor\Development\ActionRPG\UE4Editor-ActionRPG-0012.suppressed.exp
     [4/4] ActionRPGEditor.target
-  Total time in Parallel executor: 4,42 seconds
-  Total execution time: 5,14 seconds
+  Total time in Parallel executor: 4,66 seconds
+  Total execution time: 5,40 seconds

@@ -9,6 +9,8 @@
 /**
  * 
  */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnplayerMovementSpeedChangedDelegate, float, PlayerMovementSpeed);
+
 UCLASS()
 class ACTIONRPG_API UPlayerAttributeSet : public UAttributeSet
 {
@@ -17,6 +19,13 @@ class ACTIONRPG_API UPlayerAttributeSet : public UAttributeSet
 public:
 	UPlayerAttributeSet();
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes")
+	void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes/Player")
 		FGameplayAttributeData PlayerMovementSpeed;
+
+	FOnplayerMovementSpeedChangedDelegate OnPlayerMovementSpeedChanged;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes/Player")
+		FGameplayAttributeData PlayerMovementMultiplier;
 };
