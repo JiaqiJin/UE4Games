@@ -7,6 +7,7 @@
 #include "AbilitySystemInterface.h"
 #include "AbilitySystemComponent.h"
 #include "Abilities/GameplayAbility.h"
+#include "UObject/WeakObjectPtrTemplates.h"
 
 #include "KawaiiPlayerCharacter.generated.h"
 // https://www.tomlooman.com/stanford-cs193u/
@@ -17,7 +18,7 @@ class ACTIONRPG_API AKawaiiPlayerCharacter : public ACharacter, public IAbilityS
 
 public:
 	// Sets default values for this character's properties
-	AKawaiiPlayerCharacter();
+	AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject);
 
 public:
 	// Camera boom positioning the camera behind the player
@@ -38,7 +39,7 @@ public:
 	class UPlayerAttributeSet* PlayerAttributeComponent;
 
 public:
-	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
+	//virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
 
 	// Move forward/back
 	void MoveForward(float value);
@@ -52,16 +53,12 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return SpringArm; }
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
-private:
-
-	UPROPERTY(VisibleAnywhere, Category = "Character")
-		UAbilitySystemComponent* AbilitySystemComponent;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -69,5 +66,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UFUNCTION()
-	void OnPlayerMovementSpeedChanged(float MovementValue);
+		void OnPlayerMovementSpeedChanged(float MovementValue);
+
+protected:
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent; 
+	TWeakObjectPtr<class UPlayerAttributeSet> PlayerAttributeComponent;
 };

@@ -11,7 +11,7 @@
 #include "ActionRPG/Attributes/PlayerAttributeSet.h"
 
 // Sets default values
-AKawaiiPlayerCharacter::AKawaiiPlayerCharacter()
+AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject)
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -47,7 +47,7 @@ AKawaiiPlayerCharacter::AKawaiiPlayerCharacter()
 void AKawaiiPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	PlayerAttributeComponent->OnPlayerMovementSpeedChanged.AddDynamic(this, &AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged);
 }
 
@@ -78,12 +78,12 @@ void AKawaiiPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AKawaiiPlayerCharacter::LookUpAtRate);
 }
 
-UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() const
-{
-	if (AbilitySystemComponent)
-		return AbilitySystemComponent;
-	return nullptr;
-}
+//UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() const
+//{
+//	if (AbilitySystemComponent)
+//		return AbilitySystemComponent;
+//	return nullptr;
+//}
 
 void AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged(float MovementValue)
 {
@@ -121,11 +121,10 @@ void AKawaiiPlayerCharacter::MoveRight(float value)
 
 void AKawaiiPlayerCharacter::TurnAtRate(float Rate)
 {
-
+	AddControllerYawInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
 void AKawaiiPlayerCharacter::LookUpAtRate(float Rate)
 {
-
+	AddControllerPitchInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
-

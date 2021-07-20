@@ -12,6 +12,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeActionRPG_init() {}
 	ACTIONRPG_API UFunction* Z_Construct_UDelegateFunction_ActionRPG_OnplayerMovementSpeedChangedDelegate__DelegateSignature();
+	ACTIONRPG_API UFunction* Z_Construct_UDelegateFunction_ActionRPG_OnplayerMovementSpeedMultiplierChangedDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_ActionRPG()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -19,14 +20,15 @@ void EmptyLinkFunctionForGeneratedCodeActionRPG_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_ActionRPG_OnplayerMovementSpeedChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ActionRPG_OnplayerMovementSpeedMultiplierChangedDelegate__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/ActionRPG",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x25B67C95,
-				0x0D8F07D4,
+				0x6AE067FF,
+				0x54A85172,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

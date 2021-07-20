@@ -13,18 +13,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ACTIONRPG_KawaiiPlayerCharacter_generated_h
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_SPARSE_DATA
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_SPARSE_DATA
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAKawaiiPlayerCharacter(); \
 	friend struct Z_Construct_UClass_AKawaiiPlayerCharacter_Statics; \
@@ -34,7 +34,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AKawaiiPlayerCharacter*>(this); }
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAKawaiiPlayerCharacter(); \
 	friend struct Z_Construct_UClass_AKawaiiPlayerCharacter_Statics; \
@@ -44,7 +44,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AKawaiiPlayerCharacter*>(this); }
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_STANDARD_CONSTRUCTORS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AKawaiiPlayerCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AKawaiiPlayerCharacter) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AKawaiiPlayerCharacter(AKawaiiPlayerCharacter&&); \
@@ -68,31 +68,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AKawaiiPlayerCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AKawaiiPlayerCharacter)
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__AbilitySystemComponent() { return STRUCT_OFFSET(AKawaiiPlayerCharacter, AbilitySystemComponent); }
-
-
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_13_PROLOG
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_GENERATED_BODY_LEGACY \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_PRIVATE_PROPERTY_OFFSET
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_14_PROLOG
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_SPARSE_DATA \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_STANDARD_CONSTRUCTORS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_PRIVATE_PROPERTY_OFFSET \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_SPARSE_DATA \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_RPC_WRAPPERS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_INCLASS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_GENERATED_BODY \
+#define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_SPARSE_DATA \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
-	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_PRIVATE_PROPERTY_OFFSET \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_SPARSE_DATA \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_INCLASS_NO_PURE_DECLS \
+	ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
