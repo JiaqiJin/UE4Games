@@ -11,6 +11,8 @@
 
 #include "KawaiiPlayerCharacter.generated.h"
 // https://www.tomlooman.com/stanford-cs193u/
+// https://github.com/tranek/GASDocumentation
+
 UCLASS()
 class ACTIONRPG_API AKawaiiPlayerCharacter : public ACharacter, public IAbilitySystemInterface
 {
@@ -19,6 +21,13 @@ class ACTIONRPG_API AKawaiiPlayerCharacter : public ACharacter, public IAbilityS
 public:
 	// Sets default values for this character's properties
 	AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject);
+	// Called every frame
+	//virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void PossessedBy(AController* NewController) override;
 
 public:
 	// Camera boom positioning the camera behind the player
@@ -39,36 +48,38 @@ public:
 	class UPlayerAttributeSet* PlayerAttributeComponent;
 
 public:
-	//virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
-
-	// Move forward/back
+	
+	// Movements 
 	void MoveForward(float value);
-	// Move Side
 	void MoveRight(float value);
-
 	void TurnAtRate(float Rate);
-
 	void LookUpAtRate(float Rate);
 
+	// Getters
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return SpringArm; }
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const;
+
+	UFUNCTION()
+	void OnPlayerMovementSpeedChanged(float MovementValue);
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeed() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedBaseValue() const;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	UFUNCTION()
-		void OnPlayerMovementSpeedChanged(float MovementValue);
-
 protected:
-	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent; 
-	TWeakObjectPtr<class UPlayerAttributeSet> PlayerAttributeComponent;
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+	TWeakObjectPtr<class UPlayerAttributeSet> PlayerAttributes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
+	TSubclassOf<class UGameplayEffect> DefaultAttributesEffect;
+
+	void initializeDefaultAttributes();
 };

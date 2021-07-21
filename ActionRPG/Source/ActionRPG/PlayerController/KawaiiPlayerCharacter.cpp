@@ -6,18 +6,15 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Engine/World.h"
-#include "Components/CapsuleComponent.h"
+#include "UObject/UObjectGlobals.h"
 #include "ActionRPG/Attributes/PlayerAttributeSet.h"
+#include "ActionRPG/PlayerState/KawaiiPlayerState.h"
 
 // Sets default values
-AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject)
+AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject) : Super(InitializerObject)
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
-	PlayerAttributeComponent = CreateDefaultSubobject<UPlayerAttributeSet>(TEXT("PlayerAttributeComponent"));
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(GetRootComponent());
@@ -28,34 +25,25 @@ AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& I
 	FollowCamera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false; // Let camera boom to match the controller orientation
 
-	//BaseTurnRate = 45.f;
-	//BaseLookUpRate = 45.f;
+	// Turn direction
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 545.f, 0.0f);
+	GetCharacterMovement()->JumpZVelocity = 650.f;
+	GetCharacterMovement()->AirControl = 0.2f;
 
-	//// Dont rotate when the controller rotate
-	//bUseControllerRotationYaw = false;
-	//bUseControllerRotationPitch = false;
-	//bUseControllerRotationRoll = false;
+	// Dont rotate when the controller rotate
+	bUseControllerRotationYaw = false;
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationRoll = false;
 
-	//// Turn direction
-	//GetCharacterMovement()->bOrientRotationToMovement = true;
-	//GetCharacterMovement()->RotationRate = FRotator(0.0f, 545.f, 0.0f);
-	//GetCharacterMovement()->JumpZVelocity = 650.f;
-	//GetCharacterMovement()->AirControl = 0.2f;
+	/*AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("Ability System"));
+	PlayerAttributes = CreateDefaultSubobject<UPlayerAttributeSet>(TEXT("PlayerAttributeComponent"));*/
 }
 
 // Called when the game starts or when spawned
 void AKawaiiPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	PlayerAttributeComponent->OnPlayerMovementSpeedChanged.AddDynamic(this, &AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged);
-}
-
-// Called every frame
-void AKawaiiPlayerCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -78,12 +66,31 @@ void AKawaiiPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AKawaiiPlayerCharacter::LookUpAtRate);
 }
 
-//UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() const
-//{
-//	if (AbilitySystemComponent)
-//		return AbilitySystemComponent;
-//	return nullptr;
-//}
+void AKawaiiPlayerCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+	UE_LOG(LogTemp, Warning, TEXT("Possessed"));
+
+	AKawaiiPlayerState* PS = GetPlayerState<AKawaiiPlayerState>();
+	if (PS)
+	{
+		AbilitySystemComponent = Cast<UAbilitySystemComponent>(PS->GetAbilitySystemComponent());
+
+		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
+
+		PlayerAttributes = PS->GetAttributeSetBase();
+
+		initializeDefaultAttributes();
+	}
+	
+}
+
+UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() const
+{
+	if (AbilitySystemComponent.Get())
+		return AbilitySystemComponent.Get();
+	return nullptr;
+}
 
 void AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged(float MovementValue)
 {
@@ -93,7 +100,49 @@ void AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged(float MovementValue)
 	GetCharacterMovement()->MaxWalkSpeed = MovementValue;
 }
 
+float AKawaiiPlayerCharacter::GetMovementSpeed() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		PlayerAttributes->GetPlayerMovementSpeed();
+	}
+	return 0.0f;
+}
 
+float AKawaiiPlayerCharacter::GetMovementSpeedBaseValue() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		PlayerAttributes->GetPlayerMovementMultiplierAttribute().GetGameplayAttributeData(PlayerAttributes.Get());
+	}
+	return 0.0f;
+}
+
+void AKawaiiPlayerCharacter::initializeDefaultAttributes()
+{
+	if (!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+
+	if (!DefaultAttributesEffect)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() Missing Default Attributes for %s."), TEXT(__FUNCTION__), *GetName());
+		return;
+	}
+
+	FGameplayEffectContextHandle EffectContext = AbilitySystemComponent->MakeEffectContext();
+	EffectContext.AddSourceObject(this);
+
+	FGameplayEffectSpecHandle NewHandle = AbilitySystemComponent->MakeOutgoingSpec(DefaultAttributesEffect, 0, EffectContext);
+	if (NewHandle.IsValid())
+	{
+		FActiveGameplayEffectHandle ActiveGEHandle =
+			AbilitySystemComponent->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystemComponent.Get());
+	}
+}
+
+// Movements
 void AKawaiiPlayerCharacter::MoveForward(float value)
 {
 	if (Controller != nullptr && value != 0.f)
@@ -105,7 +154,6 @@ void AKawaiiPlayerCharacter::MoveForward(float value)
 		AddMovementInput(Direction, value);
 	}
 }
-
 
 void AKawaiiPlayerCharacter::MoveRight(float value)
 {

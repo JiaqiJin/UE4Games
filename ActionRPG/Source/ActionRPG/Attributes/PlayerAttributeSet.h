@@ -4,13 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
+#include "AbilitySystemComponent.h"
 #include "PlayerAttributeSet.generated.h"
-
-/**
- * 
- */
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnplayerMovementSpeedChangedDelegate, float, PlayerMovementSpeed);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnplayerMovementSpeedMultiplierChangedDelegate, float, PlayerMovementSpeedMultiplier);
 
 // Uses macros from AttributeSet.h
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
@@ -31,15 +26,12 @@ public:
 	//void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes/Player")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Player")
 	FGameplayAttributeData PlayerMovementSpeed;
-	//ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, PlayerMovementSpeed);
-	// Delegate
-	FOnplayerMovementSpeedChangedDelegate OnPlayerMovementSpeedChanged;
-	
+	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, PlayerMovementSpeed);
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes/Player")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Player")
 	FGameplayAttributeData PlayerMovementMultiplier;
-	// Delegate
-	FOnplayerMovementSpeedMultiplierChangedDelegate OnplayerMovementSpeedMultiplierChanged;
+	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, PlayerMovementMultiplier);
 };
+	

@@ -9,49 +9,15 @@
 
 UPlayerAttributeSet::UPlayerAttributeSet()
 {
-	PlayerMovementSpeed = 500.0f;
-	PlayerMovementMultiplier = 1.0f;
 }
-
-//void UPlayerAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)
-//{
-//	if (Data.EvaluatedData.Attribute.GetUProperty() == FindFieldChecked<UProperty>(AKawaiiPlayerCharacter::StaticClass(),
-//		GET_MEMBER_NAME_CHECKED(UPlayerAttributeSet, PlayerMovementSpeed)))
-//	{
-//		AKawaiiPlayerCharacter* Player = Cast<AKawaiiPlayerCharacter>(GetOwningActor());
-//		if (Player)
-//		{
-//			PlayerMovementSpeed.SetCurrentValue(Player->GetCharacterMovement()->MaxWalkSpeed);
-//			PlayerMovementSpeed.SetBaseValue(Player->GetCharacterMovement()->MaxWalkSpeed);
-//			OnPlayerMovementSpeedChanged.Broadcast(PlayerMovementSpeed.GetCurrentValue());
-//		}
-//	}
-//}
 
 void UPlayerAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
 {
-	if (Attribute.GetUProperty() == FindFieldChecked<UProperty>(AKawaiiPlayerCharacter::StaticClass(),
-		GET_MEMBER_NAME_CHECKED(UPlayerAttributeSet, PlayerMovementSpeed)))
-	{
-		AKawaiiPlayerCharacter* Player = Cast<AKawaiiPlayerCharacter>(GetOwningActor());
-		if (Player)
-		{
-			PlayerMovementSpeed.SetCurrentValue(NewValue);
-			PlayerMovementSpeed.SetBaseValue(NewValue);
-			OnPlayerMovementSpeedChanged.Broadcast(NewValue);
-		}
-	}
+	Super::PreAttributeChange(Attribute, NewValue);
 
-	if (Attribute.GetUProperty() == FindFieldChecked<UProperty>(AKawaiiPlayerCharacter::StaticClass(),
-		GET_MEMBER_NAME_CHECKED(UPlayerAttributeSet, PlayerMovementSpeed)))
+	if (Attribute == GetPlayerMovementSpeedAttribute())
 	{
-		AKawaiiPlayerCharacter* Player = Cast<AKawaiiPlayerCharacter>(GetOwningActor());
-		if (Player)
-		{
-			PlayerMovementMultiplier.SetCurrentValue(NewValue);
-			PlayerMovementMultiplier.SetBaseValue(NewValue);
-			OnplayerMovementSpeedMultiplierChanged.Broadcast(NewValue);
-		}
+		NewValue = FMath::Clamp<float>(NewValue, 0, 10000);
 	}
 }
 
