@@ -5,13 +5,14 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
-#include "GameFramework/CharacterMovementComponent.h"
 #include "UObject/UObjectGlobals.h"
 #include "ActionRPG/Attributes/PlayerAttributeSet.h"
-#include "ActionRPG/PlayerState/KawaiiPlayerState.h"
-
+#include "ActionRPG/PlayerController/KawaiiCharacterMovementComponent.h"
+#include "ActionRPG/PlayerState/HeroPlayerState.h"
 // Sets default values
-AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject) : Super(InitializerObject)
+AKawaiiPlayerCharacter::AKawaiiPlayerCharacter(const class FObjectInitializer& InitializerObject) : 
+	Super(InitializerObject/*.SetDefaultSubobjectClass<UKawaiiCharacterMovementComponent>(ACharacter::CharacterMovementComponentName)*/)
+	//Super(InitializerObject.SetDefaultSubobjectClass<UKawaiiCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -71,7 +72,12 @@ void AKawaiiPlayerCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	UE_LOG(LogTemp, Warning, TEXT("Possessed"));
 
-	AKawaiiPlayerState* PS = GetPlayerState<AKawaiiPlayerState>();
+	AHeroPlayerState* PS = GetPlayerState<AHeroPlayerState>();
+	if (!PS)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No AKawaiiPlayerState"));
+	}
+
 	if (PS)
 	{
 		AbilitySystemComponent = Cast<UAbilitySystemComponent>(PS->GetAbilitySystemComponent());
@@ -90,14 +96,6 @@ UAbilitySystemComponent* AKawaiiPlayerCharacter::GetAbilitySystemComponent() con
 	if (AbilitySystemComponent.Get())
 		return AbilitySystemComponent.Get();
 	return nullptr;
-}
-
-void AKawaiiPlayerCharacter::OnPlayerMovementSpeedChanged(float MovementValue)
-{
-	if (MovementValue < 0)
-		return;
-
-	GetCharacterMovement()->MaxWalkSpeed = MovementValue;
 }
 
 float AKawaiiPlayerCharacter::GetMovementSpeed() const
@@ -127,7 +125,7 @@ void AKawaiiPlayerCharacter::initializeDefaultAttributes()
 
 	if (!DefaultAttributesEffect)
 	{
-		UE_LOG(LogTemp, Error, TEXT("%s() Missing Default Attributes for %s."), TEXT(__FUNCTION__), *GetName());
+		UE_LOG(LogTemp, Error, TEXT("%s() Missing DefaultAttributes for %s. Please fill in the character's Blueprint."), *FString(__FUNCTION__), *GetName());
 		return;
 	}
 

@@ -61,9 +61,6 @@ public:
 
 	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const;
 
-	UFUNCTION()
-	void OnPlayerMovementSpeedChanged(float MovementValue);
-
 	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
 	float GetMovementSpeed() const;
 

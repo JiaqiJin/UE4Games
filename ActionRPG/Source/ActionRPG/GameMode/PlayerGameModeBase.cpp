@@ -7,7 +7,7 @@
 
 APlayerGameModeBase::APlayerGameModeBase()
 {
-	struct ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/Player/Character/BP_PlayerCharacter"));
+	struct ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/Player/Character/KawaiiPlayerCharacter_BP"));
 	if (PlayerPawnBPClass.Class != NULL)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;

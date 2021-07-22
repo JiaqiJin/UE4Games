@@ -17,15 +17,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_19_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \
-	DECLARE_FUNCTION(execGetMovementSpeed); \
-	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
+	DECLARE_FUNCTION(execGetMovementSpeed);
 
 
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \
-	DECLARE_FUNCTION(execGetMovementSpeed); \
-	DECLARE_FUNCTION(execOnPlayerMovementSpeedChanged);
+	DECLARE_FUNCTION(execGetMovementSpeed);
 
 
 #define ActionRPG_Source_ActionRPG_PlayerController_KawaiiPlayerCharacter_h_19_INCLASS_NO_PURE_DECLS \
