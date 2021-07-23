@@ -8,11 +8,12 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
-
+#include "RPG/Controller/HeroCharacterMovementComponent.h"
 //////////////////////////////////////////////////////////////////////////
 // ARPGCharacter
 
-ARPGCharacter::ARPGCharacter()
+ARPGCharacter::ARPGCharacter(const class FObjectInitializer& InitializerObject) :
+	Super(InitializerObject.SetDefaultSubobjectClass<UHeroCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);

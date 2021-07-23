@@ -40,3 +40,5 @@ E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Ne
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+E:\Unreal\ARPG\RPG\Source\RPG/Controller/HeroCharacterMovementComponent.h
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroCharacterMovementComponent.generated.h

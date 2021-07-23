@@ -36,7 +36,7 @@ public: \
 
 #define RPG_Source_RPG_RPGCharacter_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ARPGCharacter(const FObjectInitializer& ObjectInitializer); \
+	NO_API ARPGCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARPGCharacter) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ARPGCharacter); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARPGCharacter); \
@@ -55,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ARPGCharacter); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARPGCharacter); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARPGCharacter)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARPGCharacter)
 
 
 #define RPG_Source_RPG_RPGCharacter_h_12_PRIVATE_PROPERTY_OFFSET \

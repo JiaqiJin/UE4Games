@@ -62,6 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "RPGCharacter.h" },
 		{ "ModuleRelativePath", "RPGCharacter.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -137,7 +138,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGCharacter, 675008571);
+	IMPLEMENT_CLASS(ARPGCharacter, 599167975);
 	template<> RPG_API UClass* StaticClass<ARPGCharacter>()
 	{
 		return ARPGCharacter::StaticClass();
