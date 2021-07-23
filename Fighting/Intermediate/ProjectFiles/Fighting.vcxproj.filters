@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Fighting.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{5A37B327-5786-4114-9549-0541416EC187}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Fighting.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\FightingEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{5D0FB093-83B1-49D2-A3A6-81FBAD5AA41B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Fighting">
+      <UniqueIdentifier>{45F855F0-B8A9-46BD-82E6-AEC70E7ED5D5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Fighting\Fighting.Build.cs">
+      <Filter>Source\Fighting</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Fighting\Fighting.cpp">
+      <Filter>Source\Fighting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fighting\Fighting.h">
+      <Filter>Source\Fighting</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fighting\FightingCharacter.cpp">
+      <Filter>Source\Fighting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fighting\FightingCharacter.h">
+      <Filter>Source\Fighting</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fighting\FightingGameMode.cpp">
+      <Filter>Source\Fighting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fighting\FightingGameMode.h">
+      <Filter>Source\Fighting</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fighting\KawaiiPlayerController.cpp">
+      <Filter>Source\Fighting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fighting\KawaiiPlayerController.h">
+      <Filter>Source\Fighting</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

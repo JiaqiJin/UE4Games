@@ -1,0 +1,2 @@
+E:\Unreal\ARPG\Fighting\Intermediate\Build\Win64\UE4Editor\Development\Fighting\Definitions.Fighting.h
+E:\Unreal\ARPG\Fighting\Source\Fighting\Fighting.h
