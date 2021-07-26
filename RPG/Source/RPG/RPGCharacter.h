@@ -4,10 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
+#include "AbilitySystemComponent.h"
+#include "Abilities/GameplayAbility.h"
+#include "UObject/WeakObjectPtrTemplates.h"
 #include "RPGCharacter.generated.h"
 
-UCLASS(config=Game)
-class ARPGCharacter : public ACharacter
+// https://github.com/tranek/GASDocumentation
+
+UCLASS()
+class ARPGCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -58,15 +64,27 @@ protected:
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
+
+	virtual void PossessedBy(AController* NewController) override;
 
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const;
+
+protected:
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
+	TSubclassOf<class UGameplayEffect> DefaultAttributesEffect;
+
+	void initializeDefaultAttributes();
 };
 

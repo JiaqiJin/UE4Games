@@ -13,30 +13,32 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RPG_HeroPlayerState_generated_h
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_SPARSE_DATA
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_RPC_WRAPPERS
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_INCLASS_NO_PURE_DECLS \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_SPARSE_DATA
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAHeroPlayerState(); \
 	friend struct Z_Construct_UClass_AHeroPlayerState_Statics; \
 public: \
 	DECLARE_CLASS(AHeroPlayerState, APlayerState, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RPG"), NO_API) \
-	DECLARE_SERIALIZER(AHeroPlayerState)
+	DECLARE_SERIALIZER(AHeroPlayerState) \
+	virtual UObject* _getUObject() const override { return const_cast<AHeroPlayerState*>(this); }
 
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_INCLASS \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAHeroPlayerState(); \
 	friend struct Z_Construct_UClass_AHeroPlayerState_Statics; \
 public: \
 	DECLARE_CLASS(AHeroPlayerState, APlayerState, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RPG"), NO_API) \
-	DECLARE_SERIALIZER(AHeroPlayerState)
+	DECLARE_SERIALIZER(AHeroPlayerState) \
+	virtual UObject* _getUObject() const override { return const_cast<AHeroPlayerState*>(this); }
 
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_STANDARD_CONSTRUCTORS \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AHeroPlayerState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AHeroPlayerState(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHeroPlayerState) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AHeroPlayerState); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHeroPlayerState); \
@@ -47,9 +49,7 @@ private: \
 public:
 
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AHeroPlayerState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AHeroPlayerState(AHeroPlayerState&&); \
@@ -57,31 +57,34 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AHeroPlayerState); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHeroPlayerState); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHeroPlayerState)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AHeroPlayerState)
 
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_PRIVATE_PROPERTY_OFFSET
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_12_PROLOG
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_GENERATED_BODY_LEGACY \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AttributeSetBase() { return STRUCT_OFFSET(AHeroPlayerState, AttributeSetBase); }
+
+
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_14_PROLOG
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_SPARSE_DATA \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_RPC_WRAPPERS \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_INCLASS \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_STANDARD_CONSTRUCTORS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_SPARSE_DATA \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_INCLASS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_GENERATED_BODY \
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_SPARSE_DATA \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_INCLASS_NO_PURE_DECLS \
-	RPG_Source_RPG_PlayerState_HeroPlayerState_h_15_ENHANCED_CONSTRUCTORS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_SPARSE_DATA \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_INCLASS_NO_PURE_DECLS \
+	RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

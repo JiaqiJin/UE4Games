@@ -9,6 +9,8 @@
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "RPG/Controller/HeroCharacterMovementComponent.h"
+#include "RPG/PlayerState/HeroPlayerState.h"
+#include "RPG/Attributes/HeroPlayerAttributeSet.h"
 //////////////////////////////////////////////////////////////////////////
 // ARPGCharacter
 
@@ -46,6 +48,60 @@ ARPGCharacter::ARPGCharacter(const class FObjectInitializer& InitializerObject) 
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+void ARPGCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+	UE_LOG(LogTemp, Warning, TEXT("Possessed"));
+
+	AHeroPlayerState* PS = GetPlayerState<AHeroPlayerState>();
+	if (!PS)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Hero Player State did`nt created yet"));
+	}
+
+	if (PS)
+	{
+		AbilitySystemComponent = Cast<UAbilitySystemComponent>(PS->GetAbilitySystemComponent());
+
+		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
+
+		PlayerAttributes = PS->GetAttributeSetBase();
+
+		initializeDefaultAttributes();
+	}
+}
+
+void ARPGCharacter::initializeDefaultAttributes()
+{
+	if (!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+
+	if (!DefaultAttributesEffect)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() Missing DefaultAttributes for %s. Please fill in the character's Blueprint."), *FString(__FUNCTION__), *GetName());
+		return;
+	}
+
+	FGameplayEffectContextHandle EffectContext = AbilitySystemComponent->MakeEffectContext();
+	EffectContext.AddSourceObject(this);
+
+	FGameplayEffectSpecHandle NewHandle = AbilitySystemComponent->MakeOutgoingSpec(DefaultAttributesEffect, 0, EffectContext);
+	if (NewHandle.IsValid())
+	{
+		FActiveGameplayEffectHandle ActiveGEHandle =
+			AbilitySystemComponent->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystemComponent.Get());
+	}
+}
+
+UAbilitySystemComponent* ARPGCharacter::GetAbilitySystemComponent() const
+{
+	if (AbilitySystemComponent.Get())
+		return AbilitySystemComponent.Get();
+	return nullptr;
 }
 
 //////////////////////////////////////////////////////////////////////////
