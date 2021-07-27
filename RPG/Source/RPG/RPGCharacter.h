@@ -78,6 +78,18 @@ public:
 
 	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeed() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedBaseValue() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedMultiplier() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedMultiplierBase() const;
+
 protected:
 	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
 	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;

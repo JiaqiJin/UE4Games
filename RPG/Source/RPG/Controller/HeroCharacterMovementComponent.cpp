@@ -18,6 +18,8 @@ float UHeroCharacterMovementComponent::GetMaxSpeed() const
 		UE_LOG(LogTemp, Error, TEXT("%s() No Owner"), *FString(__FUNCTION__));
 		return Super::GetMaxSpeed();
 	}
-	// TODO
-	return 600.0f;
+
+	//UE_LOG(LogTemp, Warning, TEXT("%f PlayerSpeed"), Owner->GetMovementSpeed());
+	float MovementSpeedMultiplier = Owner->GetMovementSpeedMultiplier();
+	return Owner->GetMovementSpeed() * MovementSpeedMultiplier;
 }

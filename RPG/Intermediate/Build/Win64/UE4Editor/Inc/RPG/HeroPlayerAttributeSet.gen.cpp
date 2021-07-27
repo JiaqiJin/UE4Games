@@ -57,14 +57,14 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData[] = {
-		{ "Category", "Attributes|Player" },
+		{ "Category", "Player|Character|Attributes" },
 		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed = { "PlayerMovementSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerMovementSpeed), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData[] = {
-		{ "Category", "Attributes|Player" },
+		{ "Category", "Player|Character|Attributes" },
 		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
 	};
 #endif
@@ -100,7 +100,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 3948632352);
+	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 61826902);
 	template<> RPG_API UClass* StaticClass<UHeroPlayerAttributeSet>()
 	{
 		return UHeroPlayerAttributeSet::StaticClass();

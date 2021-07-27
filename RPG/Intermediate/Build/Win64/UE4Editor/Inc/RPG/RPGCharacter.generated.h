@@ -14,8 +14,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define RPG_RPGCharacter_generated_h
 
 #define RPG_Source_RPG_RPGCharacter_h_18_SPARSE_DATA
-#define RPG_Source_RPG_RPGCharacter_h_18_RPC_WRAPPERS
-#define RPG_Source_RPG_RPGCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_RPGCharacter_h_18_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetMovementSpeedMultiplierBase); \
+	DECLARE_FUNCTION(execGetMovementSpeedMultiplier); \
+	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \
+	DECLARE_FUNCTION(execGetMovementSpeed);
+
+
+#define RPG_Source_RPG_RPGCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetMovementSpeedMultiplierBase); \
+	DECLARE_FUNCTION(execGetMovementSpeedMultiplier); \
+	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \
+	DECLARE_FUNCTION(execGetMovementSpeed);
+
+
 #define RPG_Source_RPG_RPGCharacter_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARPGCharacter(); \

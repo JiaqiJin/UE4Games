@@ -27,11 +27,11 @@ public:
 
 	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Player")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerMovementSpeed;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementSpeed);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Player")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerMovementMultiplier;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementMultiplier);
 

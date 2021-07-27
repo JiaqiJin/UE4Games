@@ -104,6 +104,43 @@ UAbilitySystemComponent* ARPGCharacter::GetAbilitySystemComponent() const
 	return nullptr;
 }
 
+float ARPGCharacter::GetMovementSpeed() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("Hero Player GetMovementSpeed : %f"), PlayerAttributes->GetPlayerMovementSpeed());
+		return PlayerAttributes->GetPlayerMovementSpeed();
+	}
+	return 0.0f;
+}
+
+float ARPGCharacter::GetMovementSpeedBaseValue() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementSpeedAttribute().GetGameplayAttributeData(PlayerAttributes.Get())->GetBaseValue();
+	}
+	return 0.0f;
+}
+
+float ARPGCharacter::GetMovementSpeedMultiplier() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementMultiplier();
+	}
+	return 0.0f;
+}
+
+float ARPGCharacter::GetMovementSpeedMultiplierBase() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementMultiplierAttribute().GetGameplayAttributeData(PlayerAttributes.Get())->GetBaseValue();
+	}
+	return 0.0f;
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 

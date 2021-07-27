@@ -24,6 +24,12 @@ public:
 
 	class UHeroPlayerAttributeSet* GetAttributeSetBase() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeed() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSPeedMultiplier() const;
+
 protected:
 	class UAbilitySystemComponent* AbilitySystemComponent;
 

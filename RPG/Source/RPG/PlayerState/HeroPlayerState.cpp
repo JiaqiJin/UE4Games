@@ -23,7 +23,24 @@ UHeroPlayerAttributeSet* AHeroPlayerState::GetAttributeSetBase() const
 	return AttributeSetBase;
 }
 
+float AHeroPlayerState::GetMovementSpeed() const
+{
+	return AttributeSetBase->GetPlayerMovementSpeed();
+}
+
+float AHeroPlayerState::GetMovementSPeedMultiplier() const
+{
+	return AttributeSetBase->GetPlayerMovementMultiplier();
+}
+
 void AHeroPlayerState::BeginPlay()
 {
 	Super::BeginPlay();
+
+	ARPGCharacter* Player = Cast<ARPGCharacter>(GetPawn());
+	if (Player)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Hero Player"));
+		Player->GetCharacterMovement()->MaxWalkSpeed = 5000.0f;
+	}
 }

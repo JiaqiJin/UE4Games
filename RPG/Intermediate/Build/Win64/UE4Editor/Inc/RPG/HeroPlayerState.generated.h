@@ -14,8 +14,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define RPG_HeroPlayerState_generated_h
 
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_SPARSE_DATA
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS
-#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetMovementSPeedMultiplier); \
+	DECLARE_FUNCTION(execGetMovementSpeed);
+
+
+#define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetMovementSPeedMultiplier); \
+	DECLARE_FUNCTION(execGetMovementSpeed);
+
+
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAHeroPlayerState(); \

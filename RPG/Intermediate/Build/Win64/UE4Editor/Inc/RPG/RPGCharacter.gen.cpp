@@ -23,8 +23,176 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ARPGCharacter::execGetMovementSpeedMultiplierBase)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetMovementSpeedMultiplierBase();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGCharacter::execGetMovementSpeedMultiplier)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetMovementSpeedMultiplier();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGCharacter::execGetMovementSpeedBaseValue)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetMovementSpeedBaseValue();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGCharacter::execGetMovementSpeed)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetMovementSpeed();
+		P_NATIVE_END;
+	}
 	void ARPGCharacter::StaticRegisterNativesARPGCharacter()
 	{
+		UClass* Class = ARPGCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetMovementSpeed", &ARPGCharacter::execGetMovementSpeed },
+			{ "GetMovementSpeedBaseValue", &ARPGCharacter::execGetMovementSpeedBaseValue },
+			{ "GetMovementSpeedMultiplier", &ARPGCharacter::execGetMovementSpeedMultiplier },
+			{ "GetMovementSpeedMultiplierBase", &ARPGCharacter::execGetMovementSpeedMultiplierBase },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics
+	{
+		struct RPGCharacter_eventGetMovementSpeed_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetMovementSpeed_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "RPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetMovementSpeed", nullptr, nullptr, sizeof(RPGCharacter_eventGetMovementSpeed_Parms), Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics
+	{
+		struct RPGCharacter_eventGetMovementSpeedBaseValue_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetMovementSpeedBaseValue_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "RPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetMovementSpeedBaseValue", nullptr, nullptr, sizeof(RPGCharacter_eventGetMovementSpeedBaseValue_Parms), Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics
+	{
+		struct RPGCharacter_eventGetMovementSpeedMultiplier_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetMovementSpeedMultiplier_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "RPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetMovementSpeedMultiplier", nullptr, nullptr, sizeof(RPGCharacter_eventGetMovementSpeedMultiplier_Parms), Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics
+	{
+		struct RPGCharacter_eventGetMovementSpeedMultiplierBase_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetMovementSpeedMultiplierBase_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "RPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetMovementSpeedMultiplierBase", nullptr, nullptr, sizeof(RPGCharacter_eventGetMovementSpeedMultiplierBase_Parms), Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ARPGCharacter_NoRegister()
 	{
@@ -33,6 +201,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	struct Z_Construct_UClass_ARPGCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -64,6 +233,12 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	UObject* (*const Z_Construct_UClass_ARPGCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_RPG,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ARPGCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed, "GetMovementSpeed" }, // 915663213
+		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue, "GetMovementSpeedBaseValue" }, // 1941675439
+		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplier, "GetMovementSpeedMultiplier" }, // 3736167013
+		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedMultiplierBase, "GetMovementSpeedMultiplierBase" }, // 4174208618
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGCharacter_Statics::Class_MetaDataParams[] = {
@@ -140,11 +315,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ARPGCharacter_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGCharacter_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x008000A4u,
@@ -159,7 +334,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGCharacter, 3535038674);
+	IMPLEMENT_CLASS(ARPGCharacter, 2072555035);
 	template<> RPG_API UClass* StaticClass<ARPGCharacter>()
 	{
 		return ARPGCharacter::StaticClass();
