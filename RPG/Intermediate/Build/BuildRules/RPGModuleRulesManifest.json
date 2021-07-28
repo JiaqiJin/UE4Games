@@ -1,5 +1,6 @@
 {
 	"SourceFiles": [
+		"E:\\Unreal\\ARPG\\RPG\\Source\\HeroDebugModule\\HeroDebugModule.Build.cs",
 		"E:\\Unreal\\ARPG\\RPG\\Source\\RPG\\RPG.Build.cs",
 		"E:\\Unreal\\ARPG\\RPG\\Source\\RPG.Target.cs",
 		"E:\\Unreal\\ARPG\\RPG\\Source\\RPGEditor.Target.cs"

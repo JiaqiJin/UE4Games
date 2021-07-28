@@ -9,6 +9,6 @@ public class RPGTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("RPG");
+		ExtraModuleNames.AddRange(new string[] { "RPG", "HeroDebugModule" });
 	}
 }

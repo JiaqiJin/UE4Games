@@ -12,6 +12,11 @@
 				"Engine",
 				"GameplayAbilities"
 			]
+		},
+		{
+			"Name": "HeroDebugModule",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
