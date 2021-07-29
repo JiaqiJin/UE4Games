@@ -44,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerController() {}
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "Controller/HeroPlayerController.h" },
 		{ "ModuleRelativePath", "Controller/HeroPlayerController.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AHeroPlayerController_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerController, 1178447891);
+	IMPLEMENT_CLASS(AHeroPlayerController, 4222111065);
 	template<> RPG_API UClass* StaticClass<AHeroPlayerController>()
 	{
 		return AHeroPlayerController::StaticClass();

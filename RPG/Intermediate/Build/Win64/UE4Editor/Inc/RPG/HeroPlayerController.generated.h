@@ -48,8 +48,6 @@ public:
 
 
 #define RPG_Source_RPG_Controller_HeroPlayerController_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AHeroPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AHeroPlayerController(AHeroPlayerController&&); \

@@ -1,16 +1,32 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Unreal\ARPG).
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-HeroDebugModule-0002.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-HeroDebugModule-0003.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-HeroDebugModule-0004.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-HeroDebugModule-0005.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-HeroDebugModule-0006.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-RPG-0002.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-RPG-0003.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-RPG-0004.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-RPG-0005.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Binaries\Win64\UE4Editor-RPG-0006.dll
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0002.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0003.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0004.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0005.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0006.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0002.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0003.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0004.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0005.lib
+  Deleted hot-reload file: E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0006.lib
   Building RPGEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 6 actions with 12 processes...
-    [1/6] UE4Editor-RPG-0002.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0002.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0002.exp
-    [2/6] UE4Editor-RPG-0002.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0002.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0002.suppressed.exp
-    [3/6] HeroDebuggerCategory_Attributes.cpp
-    [4/6] UE4Editor-HeroDebugModule-0002.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0002.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0002.exp
-    [5/6] UE4Editor-HeroDebugModule-0002.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0002.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0002.suppressed.exp
-    [6/6] RPGEditor.target
-  Total time in Parallel executor: 4,90 seconds
-  Total execution time: 5,66 seconds
+  Building 4 actions with 12 processes...
+    [1/4] HeroCheatManager.cpp
+    [2/4] UE4Editor-RPG.lib
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG.exp
+    [3/4] UE4Editor-RPG.dll
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG.suppressed.exp
+    [4/4] RPGEditor.target
+  Total time in Parallel executor: 5,32 seconds
+  Total execution time: 6,03 seconds

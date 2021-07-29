@@ -14,4 +14,6 @@ class RPG_API AHeroPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+public:
+	AHeroPlayerController(const class FObjectInitializer& InitializerObject);
 };

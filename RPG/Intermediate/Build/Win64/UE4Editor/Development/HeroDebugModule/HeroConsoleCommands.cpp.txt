@@ -1,0 +1,2 @@
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\Definitions.HeroDebugModule.h
+E:\Unreal\ARPG\RPG\Source\HeroDebugModule\Public\HeroConsoleCommands.h

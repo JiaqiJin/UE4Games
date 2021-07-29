@@ -9,10 +9,15 @@ DEFINE_LOG_CATEGORY(HeroDebugModule);
 
 #define LOCTEXT_NAMESPACE "FHeroDebugModule"
 
+FHeroDebugModule::FHeroDebugModule()
+{
+	UE_LOG(LogTemp, Warning, TEXT("FHeroDebugModule module has started!"));
+}
+
 void FHeroDebugModule::StartupModule()
 {
 	UE_LOG(HeroDebugModule, Warning, TEXT("FHeroDebugModule module has started!"));
-
+	
 #if WITH_GAMEPLAY_DEBUGGER
 	IGameplayDebugger& GameplayDebuggerModule = IGameplayDebugger::Get();
 
