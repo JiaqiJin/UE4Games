@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RPG_HeroPlayerAttributeSet_generated_h
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_SPARSE_DATA
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_RPC_WRAPPERS
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_RPC_WRAPPERS_NO_PURE_DECLS
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_INCLASS_NO_PURE_DECLS \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_SPARSE_DATA
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_RPC_WRAPPERS
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHeroPlayerAttributeSet(); \
 	friend struct Z_Construct_UClass_UHeroPlayerAttributeSet_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UHeroPlayerAttributeSet)
 
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_INCLASS \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesUHeroPlayerAttributeSet(); \
 	friend struct Z_Construct_UClass_UHeroPlayerAttributeSet_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UHeroPlayerAttributeSet)
 
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_STANDARD_CONSTRUCTORS \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHeroPlayerAttributeSet(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UHeroPlayerAttributeSet) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_ENHANCED_CONSTRUCTORS \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UHeroPlayerAttributeSet(UHeroPlayerAttributeSet&&); \
@@ -58,28 +58,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UHeroPlayerAttributeSet); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UHeroPlayerAttributeSet)
 
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_PRIVATE_PROPERTY_OFFSET
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_20_PROLOG
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_GENERATED_BODY_LEGACY \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_PRIVATE_PROPERTY_OFFSET
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_21_PROLOG
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_SPARSE_DATA \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_RPC_WRAPPERS \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_INCLASS \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_STANDARD_CONSTRUCTORS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_SPARSE_DATA \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_RPC_WRAPPERS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_INCLASS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_GENERATED_BODY \
+#define RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_SPARSE_DATA \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_INCLASS_NO_PURE_DECLS \
-	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_23_ENHANCED_CONSTRUCTORS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_SPARSE_DATA \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_INCLASS_NO_PURE_DECLS \
+	RPG_Source_RPG_Attributes_HeroPlayerAttributeSet_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -96,9 +96,10 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroCheatManager_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Cheat Manager is a central blueprint to implement test and debug code and actions that are not to ship with the game.\n */" },
 		{ "IncludePath", "CheatManager/HeroCheatManager.h" },
 		{ "ModuleRelativePath", "CheatManager/HeroCheatManager.h" },
+		{ "ToolTip", "Cheat Manager is a central blueprint to implement test and debug code and actions that are not to ship with the game." },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHeroCheatManager_Statics::StaticCppClassTypeInfo = {
@@ -128,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroCheatManager, 3379060402);
+	IMPLEMENT_CLASS(UHeroCheatManager, 2059623116);
 	template<> RPG_API UClass* StaticClass<UHeroCheatManager>()
 	{
 		return UHeroCheatManager::StaticClass();

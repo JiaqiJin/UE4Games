@@ -15,7 +15,8 @@
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 /**
- * 
+ * Defines the set of all GameplayAttributes for your Games like health, etc.
+ * Attributes are float values defined by the struct "FGameplayAttributeData"
  */
 UCLASS()
 class RPG_API UHeroPlayerAttributeSet : public UAttributeSet
@@ -23,14 +24,18 @@ class RPG_API UHeroPlayerAttributeSet : public UAttributeSet
 	GENERATED_BODY()
 	
 public:
+	// Constructor
 	UHeroPlayerAttributeSet();
 
+	// Respond to changes to an Attribute's Current Value before changes happen.
 	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
+	// Movement Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerMovementSpeed;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementSpeed);
 
+	// Movement Multiplier Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerMovementMultiplier;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementMultiplier);

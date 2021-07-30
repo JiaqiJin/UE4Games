@@ -10,7 +10,6 @@
 
 void UHeroCheatManager::SetPlayerAttributte(FString AttributeName, float NewValue)
 {
-	UE_LOG(LogTemp, Warning, TEXT("SetPlayerAttributte"));
 	ARPGCharacter* PlayerCharacter = Cast<ARPGCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	if (PlayerCharacter)
 	{

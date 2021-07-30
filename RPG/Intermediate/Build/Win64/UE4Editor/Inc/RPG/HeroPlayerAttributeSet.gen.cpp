@@ -50,22 +50,27 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Defines the set of all GameplayAttributes for your Games like health, etc.\n * Attributes are float values defined by the struct \"FGameplayAttributeData\"\n */" },
 		{ "IncludePath", "Attributes/HeroPlayerAttributeSet.h" },
 		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Defines the set of all GameplayAttributes for your Games like health, etc.\nAttributes are float values defined by the struct \"FGameplayAttributeData\"" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData[] = {
 		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Movement Attribute\n" },
 		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Movement Attribute" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed = { "PlayerMovementSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerMovementSpeed), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData[] = {
 		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Movement Multiplier Attribute\n" },
 		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Movement Multiplier Attribute" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier = { "PlayerMovementMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerMovementMultiplier), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData)) };
@@ -100,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 61826902);
+	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 254367040);
 	template<> RPG_API UClass* StaticClass<UHeroPlayerAttributeSet>()
 	{
 		return UHeroPlayerAttributeSet::StaticClass();

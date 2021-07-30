@@ -7,7 +7,7 @@
 #include "HeroCheatManager.generated.h"
 
 /**
- * 
+ * Cheat Manager is a central blueprint to implement test and debug code and actions that are not to ship with the game.
  */
 UCLASS()
 class RPG_API UHeroCheatManager : public UCheatManager

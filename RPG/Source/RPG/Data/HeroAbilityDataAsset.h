@@ -23,6 +23,9 @@ struct FHeroGameplayAbilityBindInfo
 	TSubclassOf<class UGameplayAbility> HeroAbilities;
 };
 
+/*
+* Base class for a simple asset containing data.
+*/
 UCLASS()
 class RPG_API UHeroAbilityDataAsset : public UDataAsset
 {

@@ -52,21 +52,21 @@ ARPGCharacter::ARPGCharacter(const class FObjectInitializer& InitializerObject) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
 
+// Only called on the server
+// For player controlled characters where the ASC lives on the PlayerState, typically initialize the server in the Pawn's PossessedBy function.
 void ARPGCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 	UE_LOG(LogTemp, Warning, TEXT("Possessed"));
 
 	AHeroPlayerState* PS = GetPlayerState<AHeroPlayerState>();
-	if (!PS)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Hero Player State did`nt created yet"));
-	}
-
 	if (PS)
 	{
+		// Set ASC on the Server. Clients do this in OnRep_PlayerState()
 		AbilitySystemComponent = Cast<UAbilitySystemComponent>(PS->GetAbilitySystemComponent());
-
+		
+		// AI won't have PlayerControllers so we can init again here just to be sure.
+		// No harm in initing twice for heroes that have PlayerControllers.
 		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
 
 		PlayerAttributes = PS->GetAttributeSetBase();
@@ -93,6 +93,7 @@ void ARPGCharacter::initializeDefaultAttributes()
 	FGameplayEffectContextHandle EffectContext = AbilitySystemComponent->MakeEffectContext();
 	EffectContext.AddSourceObject(this);
 
+	// GameplayEffectSpecs are created from GameplayEffects using UAbilitySystemComponent::MakeOutgoingSpec() which is BlueprintCallable
 	FGameplayEffectSpecHandle NewHandle = AbilitySystemComponent->MakeOutgoingSpec(DefaultAttributesEffect, 0, EffectContext);
 	if (NewHandle.IsValid())
 	{

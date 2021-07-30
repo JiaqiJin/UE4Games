@@ -145,8 +145,10 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroAbilityDataAsset_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/*\n* Base class for a simple asset containing data.\n*/" },
 		{ "IncludePath", "Data/HeroAbilityDataAsset.h" },
 		{ "ModuleRelativePath", "Data/HeroAbilityDataAsset.h" },
+		{ "ToolTip", "* Base class for a simple asset containing data." },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_Inner = { "Abilities", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo, METADATA_PARAMS(nullptr, 0) };
@@ -190,7 +192,7 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroAbilityDataAsset, 1960329284);
+	IMPLEMENT_CLASS(UHeroAbilityDataAsset, 3301068946);
 	template<> RPG_API UClass* StaticClass<UHeroAbilityDataAsset>()
 	{
 		return UHeroAbilityDataAsset::StaticClass();

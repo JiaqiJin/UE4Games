@@ -19,7 +19,6 @@ float UHeroCharacterMovementComponent::GetMaxSpeed() const
 		return Super::GetMaxSpeed();
 	}
 
-	//UE_LOG(LogTemp, Warning, TEXT("%f PlayerSpeed"), Owner->GetMovementSpeed());
 	float MovementSpeedMultiplier = Owner->GetMovementSpeedMultiplier();
 	return Owner->GetMovementSpeed() * MovementSpeedMultiplier;
 }

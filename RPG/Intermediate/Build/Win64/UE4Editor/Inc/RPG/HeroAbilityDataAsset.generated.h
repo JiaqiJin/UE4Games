@@ -20,10 +20,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> RPG_API UScriptStruct* StaticStruct<struct FHeroGameplayAbilityBindInfo>();
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_SPARSE_DATA
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_RPC_WRAPPERS
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_RPC_WRAPPERS_NO_PURE_DECLS
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_INCLASS_NO_PURE_DECLS \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_SPARSE_DATA
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_RPC_WRAPPERS
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHeroAbilityDataAsset(); \
 	friend struct Z_Construct_UClass_UHeroAbilityDataAsset_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(UHeroAbilityDataAsset)
 
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_INCLASS \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_INCLASS \
 private: \
 	static void StaticRegisterNativesUHeroAbilityDataAsset(); \
 	friend struct Z_Construct_UClass_UHeroAbilityDataAsset_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UHeroAbilityDataAsset)
 
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_STANDARD_CONSTRUCTORS \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHeroAbilityDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UHeroAbilityDataAsset) \
@@ -54,7 +54,7 @@ private: \
 public:
 
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_ENHANCED_CONSTRUCTORS \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHeroAbilityDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -67,28 +67,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UHeroAbilityDataAsset); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UHeroAbilityDataAsset)
 
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_PRIVATE_PROPERTY_OFFSET
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_26_PROLOG
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_GENERATED_BODY_LEGACY \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_PRIVATE_PROPERTY_OFFSET
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_PROLOG
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_SPARSE_DATA \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_RPC_WRAPPERS \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_INCLASS \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_STANDARD_CONSTRUCTORS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_SPARSE_DATA \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_RPC_WRAPPERS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_INCLASS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_GENERATED_BODY \
+#define RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_SPARSE_DATA \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_INCLASS_NO_PURE_DECLS \
-	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_29_ENHANCED_CONSTRUCTORS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_SPARSE_DATA \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_INCLASS_NO_PURE_DECLS \
+	RPG_Source_RPG_Data_HeroAbilityDataAsset_h_32_ENHANCED_CONSTRUCTORS \
 static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class HeroAbilityDataAsset."); \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

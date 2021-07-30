@@ -70,6 +70,7 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
 
+	// Only called on the Server. Calls before Server's AcknowledgePossession.
 	virtual void PossessedBy(AController* NewController) override;
 
 public:
@@ -93,7 +94,9 @@ public:
 	float GetMovementSpeedMultiplierBase() const;
 
 protected:
+	// The core ActorComponent for interfacing with the GameplayAbilities System
 	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+	// Player Attribute Set
 	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")

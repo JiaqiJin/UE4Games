@@ -10,6 +10,9 @@ AHeroPlayerState::AHeroPlayerState()
 {
 	// Create ability system component, and set it to be explicitly replicated
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	// ASCs are typically constructed in the OwnerActor's constructor and explicitly marked replicated.
+	AbilitySystemComponent->SetIsReplicated(true);
+
 	AttributeSetBase = CreateDefaultSubobject<UHeroPlayerAttributeSet>(TEXT("AttributeSetBase"));
 }
 
@@ -36,11 +39,4 @@ float AHeroPlayerState::GetMovementSPeedMultiplier() const
 void AHeroPlayerState::BeginPlay()
 {
 	Super::BeginPlay();
-
-	ARPGCharacter* Player = Cast<ARPGCharacter>(GetPawn());
-	if (Player)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Hero Player"));
-		Player->GetCharacterMovement()->MaxWalkSpeed = 5000.0f;
-	}
 }
