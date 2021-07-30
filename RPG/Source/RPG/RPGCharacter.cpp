@@ -11,6 +11,8 @@
 #include "RPG/Controller/HeroCharacterMovementComponent.h"
 #include "RPG/PlayerState/HeroPlayerState.h"
 #include "RPG/Attributes/HeroPlayerAttributeSet.h"
+
+
 //////////////////////////////////////////////////////////////////////////
 // ARPGCharacter
 
@@ -70,6 +72,8 @@ void ARPGCharacter::PossessedBy(AController* NewController)
 		PlayerAttributes = PS->GetAttributeSetBase();
 
 		initializeDefaultAttributes();
+
+		ApplyDefaultAbilities();
 	}
 }
 
@@ -94,6 +98,15 @@ void ARPGCharacter::initializeDefaultAttributes()
 	{
 		FActiveGameplayEffectHandle ActiveGEHandle =
 			AbilitySystemComponent->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystemComponent.Get());
+	}
+}
+
+void ARPGCharacter::ApplyDefaultAbilities()
+{
+	UAbilitySystemComponent* AbilityComp = GetAbilitySystemComponent();
+	if (DefaultAbilities && AbilityComp)
+	{
+		DefaultAbilities->GiveAbilities(AbilityComp);
 	}
 }
 
@@ -166,8 +179,9 @@ void ARPGCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ARPGCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ARPGCharacter::TouchStopped);
 
-	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ARPGCharacter::OnResetVR);
+	// Bind to AbilitySystemComponent
+	AbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, FGameplayAbilityInputBinds(FString("ConfirmTarget"),
+		FString("CancelTarget"), FString("EHeroAbilityInputID"), static_cast<int32>(EHeroAbilityInputID::Type::Confirm), static_cast<int32>(EHeroAbilityInputID::Type::Cancel)));
 }
 
 

@@ -15,6 +15,6 @@ class RPG_API UHeroCheatManager : public UCheatManager
 	GENERATED_BODY()
 	
 public:
-	UFUNCTION(Exec)
+	UFUNCTION(Exec, meta = (OverrideNativeName = "Hero.Attributes.SetPlayerAttributte"))
 	void SetPlayerAttributte(FString AttributeName, float NewValue);
 };

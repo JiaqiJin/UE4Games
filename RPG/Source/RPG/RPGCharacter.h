@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "RPG/RPG.h"
+#include "RPG/Data/HeroAbilityDataAsset.h"
 #include "AbilitySystemInterface.h"
 #include "AbilitySystemComponent.h"
 #include "Abilities/GameplayAbility.h"
@@ -97,6 +99,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
 	TSubclassOf<class UGameplayEffect> DefaultAttributesEffect;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
+	UHeroAbilityDataAsset* DefaultAbilities;
+
 	void initializeDefaultAttributes();
+
+	void ApplyDefaultAbilities();
 };
 

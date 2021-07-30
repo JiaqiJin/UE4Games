@@ -75,6 +75,9 @@ E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\B
 E:\Unreal\ARPG\RPG\Source\RPG/RPGCharacter.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+E:\Unreal\ARPG\RPG\Source\RPG/RPG.h
+E:\Unreal\ARPG\RPG\Source\RPG/Data/HeroAbilityDataAsset.h
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroAbilityDataAsset.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
 E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\RPGCharacter.generated.h

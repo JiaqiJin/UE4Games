@@ -32,7 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 	{
 		UClass* Class = UHeroCheatManager::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "SetPlayerAttributte", &UHeroCheatManager::execSetPlayerAttributte },
+			{ "Hero.Attributes.SetPlayerAttributte", &UHeroCheatManager::execSetPlayerAttributte },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -60,9 +60,10 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "CheatManager/HeroCheatManager.h" },
+		{ "OverrideNativeName", "Hero.Attributes.SetPlayerAttributte" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroCheatManager, nullptr, "SetPlayerAttributte", nullptr, nullptr, sizeof(HeroCheatManager_eventSetPlayerAttributte_Parms), Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020601, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroCheatManager, nullptr, "Hero.Attributes.SetPlayerAttributte", nullptr, nullptr, sizeof(HeroCheatManager_eventSetPlayerAttributte_Parms), Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020601, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -91,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RPG,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UHeroCheatManager_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte, "SetPlayerAttributte" }, // 1389306964
+		{ &Z_Construct_UFunction_UHeroCheatManager_SetPlayerAttributte, "Hero.Attributes.SetPlayerAttributte" }, // 3199752669
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroCheatManager_Statics::Class_MetaDataParams[] = {
@@ -127,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroCheatManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroCheatManager, 3659883835);
+	IMPLEMENT_CLASS(UHeroCheatManager, 3379060402);
 	template<> RPG_API UClass* StaticClass<UHeroCheatManager>()
 	{
 		return UHeroCheatManager::StaticClass();
