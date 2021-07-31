@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"E:\\Unreal\\ARPG\\Fighting\\Source\\Fighting\\Fighting.Build.cs",
-		"E:\\Unreal\\ARPG\\Fighting\\Source\\Fighting.Target.cs",
-		"E:\\Unreal\\ARPG\\Fighting\\Source\\FightingEditor.Target.cs"
-	],
-	"EngineVersion": "4.26.2"
-}
