@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\RPG.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{807EC5B7-C0C8-4DF7-8356-A167A678882D}</UniqueIdentifier>
+      <UniqueIdentifier>{37114037-2FAC-4689-BE05-46506E122D2B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPG.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{080CB451-85A9-44DF-B643-DF892E6D180A}</UniqueIdentifier>
+      <UniqueIdentifier>{0FA24614-4410-4DAE-A6F5-E99A0785D0B0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -26,35 +26,44 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\HeroDebugModule">
-      <UniqueIdentifier>{1F9E1F32-BBE5-466C-9983-3B37F4955A3F}</UniqueIdentifier>
+      <UniqueIdentifier>{A4DF995F-C0E6-4A41-8957-87B49C09CBC1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HeroDebugModule\HeroDebugModule.Build.cs">
       <Filter>Source\HeroDebugModule</Filter>
     </None>
     <Filter Include="Source\HeroDebugModule\Private">
-      <UniqueIdentifier>{FE1183E8-AFB8-44F1-9249-03BA983C52E1}</UniqueIdentifier>
+      <UniqueIdentifier>{BC9992C5-1232-42D5-A5A5-BC7304044E94}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\HeroDebugModule\Private\HeroDebuggerCategory_Attributes.cpp">
+      <Filter>Source\HeroDebugModule\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HeroDebugModule\Private\HeroDebuggerCategory_OwnedTag.cpp">
       <Filter>Source\HeroDebugModule\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\HeroDebugModule\Private\HeroDebugModule.cpp">
       <Filter>Source\HeroDebugModule\Private</Filter>
     </ClCompile>
     <Filter Include="Source\HeroDebugModule\Public">
-      <UniqueIdentifier>{552B3BA2-9239-42EB-BA81-587E7DAFD9F3}</UniqueIdentifier>
+      <UniqueIdentifier>{249AF91F-AF50-4E46-BF36-68ABC4A97FAF}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\HeroDebugModule\Public\HeroDebuggerCategory_Attributes.h">
+      <Filter>Source\HeroDebugModule\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HeroDebugModule\Public\HeroDebuggerCategory_OwnedTag.h">
       <Filter>Source\HeroDebugModule\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\HeroDebugModule\Public\HeroDebugModule.h">
       <Filter>Source\HeroDebugModule\Public</Filter>
     </ClInclude>
     <Filter Include="Source\RPG">
-      <UniqueIdentifier>{89726A00-6749-4055-A400-C5DE50617DD3}</UniqueIdentifier>
+      <UniqueIdentifier>{089C2F3C-34FC-40CA-BFEF-95D33BBF7C82}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPG\RPG.Build.cs">
       <Filter>Source\RPG</Filter>
@@ -78,7 +87,7 @@
       <Filter>Source\RPG</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Attributes">
-      <UniqueIdentifier>{4E3818B3-A3CE-4CC3-B509-A6E2B77A89FC}</UniqueIdentifier>
+      <UniqueIdentifier>{3E90B3D9-EB3B-4987-84B0-34F0F2893670}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Attributes\HeroPlayerAttributeSet.cpp">
       <Filter>Source\RPG\Attributes</Filter>
@@ -87,7 +96,7 @@
       <Filter>Source\RPG\Attributes</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\CheatManager">
-      <UniqueIdentifier>{99717565-DD07-4516-AE95-50C81F2EE85B}</UniqueIdentifier>
+      <UniqueIdentifier>{2BC62303-8259-41B3-BFD8-AC351ADD59B7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\CheatManager\HeroCheatManager.cpp">
       <Filter>Source\RPG\CheatManager</Filter>
@@ -96,7 +105,7 @@
       <Filter>Source\RPG\CheatManager</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Controller">
-      <UniqueIdentifier>{BDA37FBF-21D2-4285-8AE3-34CA99A8BB4E}</UniqueIdentifier>
+      <UniqueIdentifier>{85A1E92E-1999-444D-A109-866E26C05E7E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Controller\HeroCharacterMovementComponent.cpp">
       <Filter>Source\RPG\Controller</Filter>
@@ -111,7 +120,7 @@
       <Filter>Source\RPG\Controller</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Data">
-      <UniqueIdentifier>{507CA90E-F3C5-4E48-AB85-EEE6C8FE6781}</UniqueIdentifier>
+      <UniqueIdentifier>{59339092-6ECE-4F53-ACD9-C18E30164E05}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Data\HeroAbilityDataAsset.cpp">
       <Filter>Source\RPG\Data</Filter>
@@ -120,7 +129,7 @@
       <Filter>Source\RPG\Data</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\GameMode">
-      <UniqueIdentifier>{2D2065FF-C443-4910-8CF3-27DB92835F3F}</UniqueIdentifier>
+      <UniqueIdentifier>{CA62A534-A0F3-461A-A13D-DA121D8AF67E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\GameMode\HeroPlayerGameModeBase.cpp">
       <Filter>Source\RPG\GameMode</Filter>
@@ -129,7 +138,7 @@
       <Filter>Source\RPG\GameMode</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\HUD">
-      <UniqueIdentifier>{C94F23BC-3925-42EC-8D85-128645348FA1}</UniqueIdentifier>
+      <UniqueIdentifier>{D1FD0AE2-A80F-46C5-A0BE-BA4870F06515}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\HUD\HeroPlayerHUD.cpp">
       <Filter>Source\RPG\HUD</Filter>
@@ -138,7 +147,7 @@
       <Filter>Source\RPG\HUD</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\PlayerState">
-      <UniqueIdentifier>{6A4FD1FE-9B2B-4972-A8A2-A810750F5ECB}</UniqueIdentifier>
+      <UniqueIdentifier>{209E81CD-F76A-40CD-9DAE-B11D089BFB92}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\PlayerState\HeroPlayerState.cpp">
       <Filter>Source\RPG\PlayerState</Filter>

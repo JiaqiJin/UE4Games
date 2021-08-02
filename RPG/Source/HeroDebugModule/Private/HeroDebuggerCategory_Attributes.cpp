@@ -61,7 +61,7 @@ void HeroDebuggerCategory_Attributes::DrawData(class APlayerController* OwnerPC,
 		for (FAttributeData Data : AttributeDatas)
 		{
 			FString DataString = FString::Printf(TEXT("%s : % f"), *Data.AttributeName, Data.AttributeCurrentValues);
-			CanvasContext.Print(FColor::Green, DataString);
+			CanvasContext.Print(FColor::Yellow, DataString);
 		}
 	}
 	AttributeDatas.Empty();

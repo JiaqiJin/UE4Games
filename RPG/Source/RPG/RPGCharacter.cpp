@@ -104,10 +104,14 @@ void ARPGCharacter::initializeDefaultAttributes()
 
 void ARPGCharacter::ApplyDefaultAbilities()
 {
-	UAbilitySystemComponent* AbilityComp = GetAbilitySystemComponent();
-	if (DefaultAbilities && AbilityComp)
+	if (!DefaultAbilities)
 	{
-		DefaultAbilities->GiveAbilities(AbilityComp);
+		UE_LOG(LogTemp, Error, TEXT("%s() Missing DefaultAbility for %s. Please fill in the character's Blueprint."), *FString(__FUNCTION__), *GetName());
+		return;
+	}
+	for (FHeroGameplayAbilityBindInfo Ability : DefaultAbilities->Abilities)
+	{
+		GrantAbilityToPlayer(FGameplayAbilitySpec(Ability.HeroAbilities, 1, static_cast<uint32>(Ability.Command), this));
 	}
 }
 
@@ -122,7 +126,6 @@ float ARPGCharacter::GetMovementSpeed() const
 {
 	if (PlayerAttributes.IsValid())
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Hero Player GetMovementSpeed : %f"), PlayerAttributes->GetPlayerMovementSpeed());
 		return PlayerAttributes->GetPlayerMovementSpeed();
 	}
 	return 0.0f;
@@ -153,6 +156,40 @@ float ARPGCharacter::GetMovementSpeedMultiplierBase() const
 		return PlayerAttributes->GetPlayerMovementMultiplierAttribute().GetGameplayAttributeData(PlayerAttributes.Get())->GetBaseValue();
 	}
 	return 0.0f;
+}
+
+void ARPGCharacter::GrantAbilityToPlayer(FGameplayAbilitySpec Ability)
+{
+	if(!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+	if (!Ability.Ability)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid."), *FString(__FUNCTION__), *GetName());
+		return;
+	}
+	AbilitySystemComponent->GiveAbility(Ability);
+}
+
+void ARPGCharacter::GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities)
+{
+	if (!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+	for (FGameplayAbilitySpec Ability : Abilities)
+	{
+		if (!Ability.Ability)
+		{
+			UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid."), *FString(__FUNCTION__), *GetName());
+			return;
+		}
+		else
+		{
+			AbilitySystemComponent->GiveAbility(Ability);
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////

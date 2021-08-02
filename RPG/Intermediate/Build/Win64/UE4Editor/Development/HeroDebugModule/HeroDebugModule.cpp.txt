@@ -57,4 +57,5 @@ E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\B
 E:\UnrealEngine4\UE_4.26\Engine\Source\Developer\GameplayDebugger\Public\GameplayDebuggerCategory.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Developer\GameplayDebugger\Public\GameplayDebuggerTypes.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Developer\GameplayDebugger\Public\GameplayDebuggerAddonBase.h
+E:\Unreal\ARPG\RPG\Source\HeroDebugModule\Public\HeroDebuggerCategory_OwnedTag.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Developer\GameplayDebugger\Public\GameplayDebugger.h

@@ -2,6 +2,7 @@
 
 #if WITH_GAMEPLAY_DEBUGGER
 #include "HeroDebuggerCategory_Attributes.h"
+#include "HeroDebuggerCategory_OwnedTag.h"
 #include "GameplayDebugger.h"
 #endif
 
@@ -23,7 +24,10 @@ void FHeroDebugModule::StartupModule()
 
 	GameplayDebuggerModule.RegisterCategory("Character Attributtes", IGameplayDebugger::FOnGetCategory::CreateStatic(
 		&HeroDebuggerCategory_Attributes::MakeInstance), EGameplayDebuggerCategoryState::EnabledInSimulate);
+	GameplayDebuggerModule.NotifyCategoriesChanged();
 
+	GameplayDebuggerModule.RegisterCategory("OWNED TAGS", IGameplayDebugger::FOnGetCategory::CreateStatic(
+		&HeroDebuggerCategory_OwnedTag::MakeInstance), EGameplayDebuggerCategoryState::EnabledInSimulate);
 	GameplayDebuggerModule.NotifyCategoriesChanged();
 #endif
 }
@@ -37,6 +41,7 @@ void FHeroDebugModule::ShutdownModule()
 	{
 		IGameplayDebugger& GameplayDebuggerModule = IGameplayDebugger::Get();
 		GameplayDebuggerModule.UnregisterCategory("Character Attributtes");
+		GameplayDebuggerModule.UnregisterCategory("OWNED TAGS");
 	}
 #endif
 }

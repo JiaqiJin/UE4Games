@@ -108,5 +108,8 @@ protected:
 	void initializeDefaultAttributes();
 
 	void ApplyDefaultAbilities();
+
+	void GrantAbilityToPlayer(FGameplayAbilitySpec Ability);
+	void GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities);
 };
 
