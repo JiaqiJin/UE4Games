@@ -8,6 +8,7 @@
 /NODEFAULTLIB
 "E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\RPGEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\HeroDebuggerCategory_Attributes.cpp.obj"
+"E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\HeroDebuggerCategory_OwnedTag.cpp.obj"
 "E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\HeroDebugModule.cpp.obj"
 "E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\Default.rc2.res"
 /OUT:"E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0007.lib"

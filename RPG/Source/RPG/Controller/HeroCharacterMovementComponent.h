@@ -18,4 +18,8 @@ public:
 	UHeroCharacterMovementComponent();
 
 	virtual float GetMaxSpeed() const override;
+
+	virtual float GetMaxJumpHeight() const override;
+
+	virtual float GetMaxJumpHeightWithJumpTime() const override;
 };

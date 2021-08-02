@@ -34,7 +34,7 @@ ARPGCharacter::ARPGCharacter(const class FObjectInitializer& InitializerObject) 
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
-	GetCharacterMovement()->JumpZVelocity = 600.f;
+	GetCharacterMovement()->JumpZVelocity = 600.0f;
 	GetCharacterMovement()->AirControl = 0.2f;
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
@@ -158,6 +158,24 @@ float ARPGCharacter::GetMovementSpeedMultiplierBase() const
 	return 0.0f;
 }
 
+float ARPGCharacter::GetJumpHeightMultiplier() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerJumpHeightMultiplier();
+	}
+	return 0.0f;
+}
+
+float ARPGCharacter::GetAirControllerMultiplier() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerAirControllerMultiplier();
+	}
+	return 0.0f;
+}
+
 void ARPGCharacter::GrantAbilityToPlayer(FGameplayAbilitySpec Ability)
 {
 	if(!AbilitySystemComponent.IsValid())
@@ -199,8 +217,8 @@ void ARPGCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	/*PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);*/
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ARPGCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ARPGCharacter::MoveRight);

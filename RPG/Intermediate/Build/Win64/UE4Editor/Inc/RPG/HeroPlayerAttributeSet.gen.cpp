@@ -40,6 +40,14 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerMovementMultiplier_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PlayerMovementMultiplier;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerJumpHeightMultiplier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PlayerJumpHeightMultiplier;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerAirControllerMultiplier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PlayerAirControllerMultiplier;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -74,9 +82,29 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier = { "PlayerMovementMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerMovementMultiplier), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerJumpHeightMultiplier_MetaData[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Movement Attribute\n" },
+		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Movement Attribute" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerJumpHeightMultiplier = { "PlayerJumpHeightMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerJumpHeightMultiplier), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerJumpHeightMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerJumpHeightMultiplier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerAirControllerMultiplier_MetaData[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Movement Multiplier Attribute\n" },
+		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Movement Multiplier Attribute" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerAirControllerMultiplier = { "PlayerAirControllerMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, PlayerAirControllerMultiplier), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerAirControllerMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerAirControllerMultiplier_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerJumpHeightMultiplier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerAirControllerMultiplier,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UHeroPlayerAttributeSet>::IsAbstract,
@@ -105,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 254367040);
+	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 3696666619);
 	template<> RPG_API UClass* StaticClass<UHeroPlayerAttributeSet>()
 	{
 		return UHeroPlayerAttributeSet::StaticClass();

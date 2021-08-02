@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 		return EHeroAbilityInputID_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EHeroAbilityInputID(EHeroAbilityInputID_StaticEnum, TEXT("/Script/RPG"), TEXT("EHeroAbilityInputID"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 3153443731U; }
+	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 4088711758U; }
 	UEnum* Z_Construct_UEnum_RPG_EHeroAbilityInputID()
 	{
 #if WITH_HOT_RELOAD
@@ -46,6 +46,7 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "EHeroAbilityInputID::Confirm", (int64)EHeroAbilityInputID::Confirm },
 				{ "EHeroAbilityInputID::Cancel", (int64)EHeroAbilityInputID::Cancel },
 				{ "EHeroAbilityInputID::Ability1", (int64)EHeroAbilityInputID::Ability1 },
+				{ "EHeroAbilityInputID::Jump", (int64)EHeroAbilityInputID::Jump },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -62,6 +63,10 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "Confirm.DisplayName", "Confirm" },
 				{ "Confirm.Name", "EHeroAbilityInputID::Confirm" },
 				{ "Confirm.ToolTip", "1 Confirm LMB" },
+				{ "Jump.Comment", "// 4 Jump SpaceBar\n" },
+				{ "Jump.DisplayName", "Jump" },
+				{ "Jump.Name", "EHeroAbilityInputID::Jump" },
+				{ "Jump.ToolTip", "4 Jump SpaceBar" },
 				{ "ModuleRelativePath", "RPG.h" },
 				{ "None.Comment", "// 0 None\n" },
 				{ "None.DisplayName", "None" },

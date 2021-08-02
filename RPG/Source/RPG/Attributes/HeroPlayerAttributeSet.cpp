@@ -20,6 +20,11 @@ void UHeroPlayerAttributeSet::PreAttributeChange(const FGameplayAttribute& Attri
 
 	if (Attribute == GetPlayerMovementSpeedAttribute())
 	{
-		NewValue = FMath::Clamp<float>(NewValue, 150, 1000);
+		NewValue = FMath::Clamp<float>(NewValue, 0.0f, 1000.0f);
+	}
+
+	if (Attribute == GetPlayerMovementMultiplierAttribute())
+	{
+		NewValue = FMath::Clamp<float>(NewValue, 1.0f, 10.0f);
 	}
 }

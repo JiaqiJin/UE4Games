@@ -93,6 +93,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
 	float GetMovementSpeedMultiplierBase() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetJumpHeightMultiplier() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetAirControllerMultiplier() const;
+
 protected:
 	// The core ActorComponent for interfacing with the GameplayAbilities System
 	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
