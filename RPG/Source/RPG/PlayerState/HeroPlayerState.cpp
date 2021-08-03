@@ -16,6 +16,14 @@ AHeroPlayerState::AHeroPlayerState()
 	AttributeSetBase = CreateDefaultSubobject<UHeroPlayerAttributeSet>(TEXT("AttributeSetBase"));
 }
 
+void AHeroPlayerState::InitializeAttributes()
+{
+	if (AbilitySystemComponent && AttributeDataTable)
+	{
+		const UAttributeSet* Attributes = AbilitySystemComponent->InitStats(UHeroPlayerAttributeSet::StaticClass(), AttributeDataTable);
+	}
+}
+
 UAbilitySystemComponent* AHeroPlayerState::GetAbilitySystemComponent() const
 {
 	return AbilitySystemComponent;

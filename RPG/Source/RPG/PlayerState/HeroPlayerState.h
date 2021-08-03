@@ -24,6 +24,8 @@ public:
 
 	class UHeroPlayerAttributeSet* GetAttributeSetBase() const;
 
+	void InitializeAttributes();
+
 	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
 	float GetMovementSpeed() const;
 
@@ -46,6 +48,9 @@ protected:
 
 	UPROPERTY()
 	class UHeroPlayerAttributeSet* AttributeSetBase;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player|Abilities")
+	class UDataTable* AttributeDataTable;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

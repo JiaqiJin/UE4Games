@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 	ENGINE_API UClass* Z_Construct_UClass_APlayerState();
 	UPackage* Z_Construct_UPackage__Script_RPG();
 	RPG_API UClass* Z_Construct_UClass_UHeroPlayerAttributeSet_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AHeroPlayerState::execGetPlayerAirControl)
@@ -251,6 +252,10 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeSetBase_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttributeSetBase;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeDataTable_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttributeDataTable;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -283,8 +288,16 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeSetBase = { "AttributeSetBase", nullptr, (EPropertyFlags)0x0020080000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHeroPlayerState, AttributeSetBase), Z_Construct_UClass_UHeroPlayerAttributeSet_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeSetBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeSetBase_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeDataTable_MetaData[] = {
+		{ "Category", "Player|Abilities" },
+		{ "ModuleRelativePath", "PlayerState/HeroPlayerState.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeDataTable = { "AttributeDataTable", nullptr, (EPropertyFlags)0x0020080000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHeroPlayerState, AttributeDataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeDataTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeDataTable_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHeroPlayerState_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeSetBase,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHeroPlayerState_Statics::NewProp_AttributeDataTable,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AHeroPlayerState_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AHeroPlayerState, IAbilitySystemInterface), false },
@@ -316,7 +329,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerState, 1784966578);
+	IMPLEMENT_CLASS(AHeroPlayerState, 459588849);
 	template<> RPG_API UClass* StaticClass<AHeroPlayerState>()
 	{
 		return AHeroPlayerState::StaticClass();

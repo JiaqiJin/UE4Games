@@ -75,8 +75,9 @@ void ARPGCharacter::PossessedBy(AController* NewController)
 		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
 
 		PlayerAttributes = PS->GetAttributeSetBase();
+		PS->InitializeAttributes();
 
-		initializeDefaultAttributes();
+		//initializeDefaultAttributes();
 
 		ApplyDefaultAbilities();
 

@@ -1,0 +1,6 @@
+Name,BaseValue,MinValue,MaxValue,DerivedAttributeInfo,bCanStack
+HeroPlayerAttributeSet.PlayerMovementSpeed,300,0,10000,,TRUE
+HeroPlayerAttributeSet.PlayerMovementMultiplier,1,1,10,,TRUE
+HeroPlayerAttributeSet.PlayerJumpHeight,600,0,2000,,TRUE
+HeroPlayerAttributeSet.PlayerJumpHeightMultiplier,1,0,10,,TRUE
+HeroPlayerAttributeSet.PlayerAirControl,1,0,1,,TRUE

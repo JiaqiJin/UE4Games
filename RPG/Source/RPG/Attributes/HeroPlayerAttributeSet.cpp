@@ -33,6 +33,11 @@ void UHeroPlayerAttributeSet::PreAttributeChange(const FGameplayAttribute& Attri
 		NewValue = FMath::Clamp<float>(NewValue, 0.0f, 2000.0f);
 	}
 
+	if (Attribute == GetPlayerJumpHeightMultiplierAttribute())
+	{
+		NewValue = FMath::Clamp<float>(NewValue, 0.0f, 10.0f);
+	}
+
 	if (Attribute == GetPlayerAirControlAttribute())
 	{
 		NewValue = FMath::Clamp<float>(NewValue, 0.0f, 1.0f);

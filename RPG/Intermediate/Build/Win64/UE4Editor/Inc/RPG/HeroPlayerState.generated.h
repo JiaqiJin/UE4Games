@@ -77,7 +77,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHeroPlayerState); \
 
 
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__AttributeSetBase() { return STRUCT_OFFSET(AHeroPlayerState, AttributeSetBase); }
+	FORCEINLINE static uint32 __PPO__AttributeSetBase() { return STRUCT_OFFSET(AHeroPlayerState, AttributeSetBase); } \
+	FORCEINLINE static uint32 __PPO__AttributeDataTable() { return STRUCT_OFFSET(AHeroPlayerState, AttributeDataTable); }
 
 
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_14_PROLOG

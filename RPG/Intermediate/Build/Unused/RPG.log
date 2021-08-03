@@ -1,16 +1,17 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Unreal\ARPG).
   Building RPGEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 6 actions with 12 processes...
-    [1/6] UE4Editor-HeroDebugModule-0008.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.exp
-    [2/6] HeroPlayerState.cpp
-    [3/6] UE4Editor-RPG-0008.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.exp
-    [4/6] UE4Editor-RPG-0008.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.suppressed.exp
-    [5/6] UE4Editor-HeroDebugModule-0008.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.suppressed.exp
-    [6/6] RPGEditor.target
-  Total time in Parallel executor: 5,51 seconds
-  Total execution time: 6,22 seconds
+  Building 7 actions with 12 processes...
+    [1/7] UE4Editor-HeroDebugModule-0016.lib
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0016.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0016.exp
+    [2/7] HeroPlayerState.cpp
+    [3/7] RPGCharacter.cpp
+    [4/7] UE4Editor-RPG-0016.lib
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0016.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0016.exp
+    [5/7] UE4Editor-RPG-0016.dll
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0016.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0016.suppressed.exp
+    [6/7] UE4Editor-HeroDebugModule-0016.dll
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0016.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0016.suppressed.exp
+    [7/7] RPGEditor.target
+  Total time in Parallel executor: 5,59 seconds
+  Total execution time: 6,32 seconds
