@@ -36,6 +36,21 @@ float AHeroPlayerState::GetMovementSPeedMultiplier() const
 	return AttributeSetBase->GetPlayerMovementMultiplier();
 }
 
+float AHeroPlayerState::GetPlayerJumpHeight() const
+{
+	return AttributeSetBase->GetPlayerJumpHeight();
+}
+
+float AHeroPlayerState::GetPlayerJumpHeightMultiplier() const
+{
+	return AttributeSetBase->GetPlayerJumpHeightMultiplier();
+}
+
+float AHeroPlayerState::GetPlayerAirControl() const
+{
+	return AttributeSetBase->GetPlayerAirControl();
+}
+
 void AHeroPlayerState::BeginPlay()
 {
 	Super::BeginPlay();

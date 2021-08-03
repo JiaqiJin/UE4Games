@@ -16,8 +16,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define RPG_Source_RPG_RPGCharacter_h_20_SPARSE_DATA
 #define RPG_Source_RPG_RPGCharacter_h_20_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetAirControllerMultiplier); \
+	DECLARE_FUNCTION(execGetAirControl); \
 	DECLARE_FUNCTION(execGetJumpHeightMultiplier); \
+	DECLARE_FUNCTION(execGetJumpHeight); \
 	DECLARE_FUNCTION(execGetMovementSpeedMultiplierBase); \
 	DECLARE_FUNCTION(execGetMovementSpeedMultiplier); \
 	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \
@@ -26,8 +27,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define RPG_Source_RPG_RPGCharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetAirControllerMultiplier); \
+	DECLARE_FUNCTION(execGetAirControl); \
 	DECLARE_FUNCTION(execGetJumpHeightMultiplier); \
+	DECLARE_FUNCTION(execGetJumpHeight); \
 	DECLARE_FUNCTION(execGetMovementSpeedMultiplierBase); \
 	DECLARE_FUNCTION(execGetMovementSpeedMultiplier); \
 	DECLARE_FUNCTION(execGetMovementSpeedBaseValue); \

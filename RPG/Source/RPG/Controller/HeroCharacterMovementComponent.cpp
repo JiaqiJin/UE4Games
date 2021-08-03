@@ -7,7 +7,7 @@
 
 UHeroCharacterMovementComponent::UHeroCharacterMovementComponent()
 {
-
+	
 }
 
 float UHeroCharacterMovementComponent::GetMaxSpeed() const
@@ -23,43 +23,34 @@ float UHeroCharacterMovementComponent::GetMaxSpeed() const
 	return Owner->GetMovementSpeed() * MovementSpeedMultiplier;
 }
 
-float UHeroCharacterMovementComponent::GetMaxJumpHeight() const
+void UHeroCharacterMovementComponent::SetNewJumpZVelocity(float CurrentJumpZValue)
 {
 	ARPGCharacter* Owner = Cast<ARPGCharacter>(GetOwner());
-	if (!Owner)
+	if (Owner)
 	{
 		float JumpHeightMultiplier = Owner->GetJumpHeightMultiplier();
-
-		const float Gravity = GetGravityZ();
-		if (FMath::Abs(Gravity) > KINDA_SMALL_NUMBER)
-		{
-			return FMath::Square(JumpZVelocity * JumpHeightMultiplier) / (-2.f * Gravity);
-		}
-		else
-		{
-			return 0.f;
-		}
+		float JumpHeight = Owner->GetJumpHeight();
+		
+		JumpZVelocity = JumpHeight * JumpHeightMultiplier;
 	}
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s() No Owner"), *FString(__FUNCTION__));
-		return Super::GetMaxJumpHeight();
+		JumpZVelocity = CurrentJumpZValue;
 	}
 }
 
-float UHeroCharacterMovementComponent::GetMaxJumpHeightWithJumpTime() const
+void UHeroCharacterMovementComponent::SetNewAirControl(float NewValue)
 {
-	const float MaxJumpHeight = GetMaxJumpHeight();
-
-	if (CharacterOwner)
+	ARPGCharacter* Owner = Cast<ARPGCharacter>(GetOwner());
+	if (Owner)
 	{
-		// When bApplyGravityWhileJumping is true, the actual max height will be lower than this.
-		// However, it will also be dependent on framerate (and substep iterations) so just return this
-		// to avoid expensive calculations.
-
-		// This can be imagined as the character being displaced to some height, then jumping from that height.
-		return (CharacterOwner->JumpMaxHoldTime * JumpZVelocity) + MaxJumpHeight;
+		float LocalAirControl = Owner->GetAirControl();
+		AirControl = LocalAirControl;
 	}
-
-	return MaxJumpHeight;
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() No Owner"), *FString(__FUNCTION__));
+		AirControl = NewValue;
+	}
 }

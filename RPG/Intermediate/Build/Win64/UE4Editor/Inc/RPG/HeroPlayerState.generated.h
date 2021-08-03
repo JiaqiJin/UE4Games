@@ -16,12 +16,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_SPARSE_DATA
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetPlayerAirControl); \
+	DECLARE_FUNCTION(execGetPlayerJumpHeightMultiplier); \
+	DECLARE_FUNCTION(execGetPlayerJumpHeight); \
 	DECLARE_FUNCTION(execGetMovementSPeedMultiplier); \
 	DECLARE_FUNCTION(execGetMovementSpeed);
 
 
 #define RPG_Source_RPG_PlayerState_HeroPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetPlayerAirControl); \
+	DECLARE_FUNCTION(execGetPlayerJumpHeightMultiplier); \
+	DECLARE_FUNCTION(execGetPlayerJumpHeight); \
 	DECLARE_FUNCTION(execGetMovementSPeedMultiplier); \
 	DECLARE_FUNCTION(execGetMovementSpeed);
 

@@ -26,16 +26,21 @@ ARPGCharacter::ARPGCharacter(const class FObjectInitializer& InitializerObject) 
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
 
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
-	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
-	GetCharacterMovement()->JumpZVelocity = 600.0f;
-	GetCharacterMovement()->AirControl = 0.2f;
+	UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+	if (MovementComponent)
+	{
+		// Configure character movement
+		MovementComponent->bOrientRotationToMovement = true; // Character moves in the direction of input...	
+		MovementComponent->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
+		//MovementComponent->JumpZVelocity = 600.0f;
+		//MovementComponent->AirControl = 0.2f;
+	}
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -74,6 +79,16 @@ void ARPGCharacter::PossessedBy(AController* NewController)
 		initializeDefaultAttributes();
 
 		ApplyDefaultAbilities();
+
+		// Initialize character movement component on Possed + call SetNewJumpZVelocity and SetNewAirControl
+		UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+		if (MovementComponent)
+		{
+			// Configure character movement
+			MovementComponent->bOrientRotationToMovement = true; // Character moves in the direction of input...	
+			MovementComponent->SetNewJumpZVelocity(MovementComponent->JumpZVelocity);
+			MovementComponent->SetNewAirControl(MovementComponent->AirControl);
+		}
 	}
 }
 
@@ -158,6 +173,15 @@ float ARPGCharacter::GetMovementSpeedMultiplierBase() const
 	return 0.0f;
 }
 
+float ARPGCharacter::GetJumpHeight() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerJumpHeight();
+	}
+	return 0.0f;
+}
+
 float ARPGCharacter::GetJumpHeightMultiplier() const
 {
 	if (PlayerAttributes.IsValid())
@@ -167,11 +191,11 @@ float ARPGCharacter::GetJumpHeightMultiplier() const
 	return 0.0f;
 }
 
-float ARPGCharacter::GetAirControllerMultiplier() const
+float ARPGCharacter::GetAirControl() const
 {
 	if (PlayerAttributes.IsValid())
 	{
-		return PlayerAttributes->GetPlayerAirControllerMultiplier();
+		return PlayerAttributes->GetPlayerAirControl();
 	}
 	return 0.0f;
 }

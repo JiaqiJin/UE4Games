@@ -40,13 +40,18 @@ public:
 	FGameplayAttributeData PlayerMovementMultiplier;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementMultiplier);
 
-	// Movement Attribute
+	// Jump Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerJumpHeight;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerJumpHeight);
+
+	// Jump Multiplier Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerJumpHeightMultiplier;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerJumpHeightMultiplier);
 
-	// Movement Multiplier Attribute
+	// Air Multiplier Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
-	FGameplayAttributeData PlayerAirControllerMultiplier;
-	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerAirControllerMultiplier);
+	FGameplayAttributeData PlayerAirControl;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerAirControl);
 };

@@ -19,7 +19,8 @@ public:
 
 	virtual float GetMaxSpeed() const override;
 
-	virtual float GetMaxJumpHeight() const override;
+	// Set JumzVelocity parameter base on attribute values
+	void SetNewJumpZVelocity(float CurrentJumpZValue);
 
-	virtual float GetMaxJumpHeightWithJumpTime() const override;
+	void SetNewAirControl(float NewValue);
 };

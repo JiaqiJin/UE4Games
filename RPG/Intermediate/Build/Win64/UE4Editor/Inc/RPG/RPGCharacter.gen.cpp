@@ -24,11 +24,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	RPG_API UClass* Z_Construct_UClass_UHeroAbilityDataAsset_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(ARPGCharacter::execGetAirControllerMultiplier)
+	DEFINE_FUNCTION(ARPGCharacter::execGetAirControl)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(float*)Z_Param__Result=P_THIS->GetAirControllerMultiplier();
+		*(float*)Z_Param__Result=P_THIS->GetAirControl();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ARPGCharacter::execGetJumpHeightMultiplier)
@@ -36,6 +36,13 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(float*)Z_Param__Result=P_THIS->GetJumpHeightMultiplier();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGCharacter::execGetJumpHeight)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetJumpHeight();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ARPGCharacter::execGetMovementSpeedMultiplierBase)
@@ -70,7 +77,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	{
 		UClass* Class = ARPGCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetAirControllerMultiplier", &ARPGCharacter::execGetAirControllerMultiplier },
+			{ "GetAirControl", &ARPGCharacter::execGetAirControl },
+			{ "GetJumpHeight", &ARPGCharacter::execGetJumpHeight },
 			{ "GetJumpHeightMultiplier", &ARPGCharacter::execGetJumpHeightMultiplier },
 			{ "GetMovementSpeed", &ARPGCharacter::execGetMovementSpeed },
 			{ "GetMovementSpeedBaseValue", &ARPGCharacter::execGetMovementSpeedBaseValue },
@@ -79,9 +87,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics
+	struct Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics
 	{
-		struct RPGCharacter_eventGetAirControllerMultiplier_Parms
+		struct RPGCharacter_eventGetAirControl_Parms
 		{
 			float ReturnValue;
 		};
@@ -92,23 +100,56 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetAirControllerMultiplier_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::NewProp_ReturnValue,
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetAirControl_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Player|Character|Attributes" },
 		{ "ModuleRelativePath", "RPGCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetAirControllerMultiplier", nullptr, nullptr, sizeof(RPGCharacter_eventGetAirControllerMultiplier_Parms), Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetAirControl", nullptr, nullptr, sizeof(RPGCharacter_eventGetAirControl_Parms), Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetAirControl()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetAirControl_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics
+	{
+		struct RPGCharacter_eventGetJumpHeight_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RPGCharacter_eventGetJumpHeight_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "RPGCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGCharacter, nullptr, "GetJumpHeight", nullptr, nullptr, sizeof(RPGCharacter_eventGetJumpHeight_Parms), Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGCharacter_GetJumpHeight()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGCharacter_GetJumpHeight_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -322,7 +363,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RPG,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARPGCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARPGCharacter_GetAirControllerMultiplier, "GetAirControllerMultiplier" }, // 3955291220
+		{ &Z_Construct_UFunction_ARPGCharacter_GetAirControl, "GetAirControl" }, // 4006619019
+		{ &Z_Construct_UFunction_ARPGCharacter_GetJumpHeight, "GetJumpHeight" }, // 4013294773
 		{ &Z_Construct_UFunction_ARPGCharacter_GetJumpHeightMultiplier, "GetJumpHeightMultiplier" }, // 4227348334
 		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeed, "GetMovementSpeed" }, // 915663213
 		{ &Z_Construct_UFunction_ARPGCharacter_GetMovementSpeedBaseValue, "GetMovementSpeedBaseValue" }, // 1941675439
@@ -431,7 +473,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGCharacter, 557567949);
+	IMPLEMENT_CLASS(ARPGCharacter, 3147805685);
 	template<> RPG_API UClass* StaticClass<ARPGCharacter>()
 	{
 		return ARPGCharacter::StaticClass();

@@ -30,6 +30,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
 	float GetMovementSPeedMultiplier() const;
 
+	// Jump Attribute
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetPlayerJumpHeight() const;
+	
+	// Jump Multiplier Attribute
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetPlayerJumpHeightMultiplier() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetPlayerAirControl() const;
+	
 protected:
 	class UAbilitySystemComponent* AbilitySystemComponent;
 

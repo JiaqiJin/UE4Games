@@ -20,6 +20,27 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 	RPG_API UClass* Z_Construct_UClass_UHeroPlayerAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AHeroPlayerState::execGetPlayerAirControl)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetPlayerAirControl();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AHeroPlayerState::execGetPlayerJumpHeightMultiplier)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetPlayerJumpHeightMultiplier();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AHeroPlayerState::execGetPlayerJumpHeight)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetPlayerJumpHeight();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AHeroPlayerState::execGetMovementSPeedMultiplier)
 	{
 		P_FINISH;
@@ -40,6 +61,9 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetMovementSpeed", &AHeroPlayerState::execGetMovementSpeed },
 			{ "GetMovementSPeedMultiplier", &AHeroPlayerState::execGetMovementSPeedMultiplier },
+			{ "GetPlayerAirControl", &AHeroPlayerState::execGetPlayerAirControl },
+			{ "GetPlayerJumpHeight", &AHeroPlayerState::execGetPlayerJumpHeight },
+			{ "GetPlayerJumpHeightMultiplier", &AHeroPlayerState::execGetPlayerJumpHeightMultiplier },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -109,6 +133,109 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics
+	{
+		struct HeroPlayerState_eventGetPlayerAirControl_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(HeroPlayerState_eventGetPlayerAirControl_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "ModuleRelativePath", "PlayerState/HeroPlayerState.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHeroPlayerState, nullptr, "GetPlayerAirControl", nullptr, nullptr, sizeof(HeroPlayerState_eventGetPlayerAirControl_Parms), Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics
+	{
+		struct HeroPlayerState_eventGetPlayerJumpHeight_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(HeroPlayerState_eventGetPlayerJumpHeight_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Jump Attribute\n" },
+		{ "ModuleRelativePath", "PlayerState/HeroPlayerState.h" },
+		{ "ToolTip", "Jump Attribute" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHeroPlayerState, nullptr, "GetPlayerJumpHeight", nullptr, nullptr, sizeof(HeroPlayerState_eventGetPlayerJumpHeight_Parms), Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics
+	{
+		struct HeroPlayerState_eventGetPlayerJumpHeightMultiplier_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(HeroPlayerState_eventGetPlayerJumpHeightMultiplier_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player|Character|Attributes" },
+		{ "Comment", "// Jump Multiplier Attribute\n" },
+		{ "ModuleRelativePath", "PlayerState/HeroPlayerState.h" },
+		{ "ToolTip", "Jump Multiplier Attribute" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHeroPlayerState, nullptr, "GetPlayerJumpHeightMultiplier", nullptr, nullptr, sizeof(HeroPlayerState_eventGetPlayerJumpHeightMultiplier_Parms), Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AHeroPlayerState_NoRegister()
 	{
 		return AHeroPlayerState::StaticClass();
@@ -136,6 +263,9 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AHeroPlayerState_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AHeroPlayerState_GetMovementSpeed, "GetMovementSpeed" }, // 711901668
 		{ &Z_Construct_UFunction_AHeroPlayerState_GetMovementSPeedMultiplier, "GetMovementSPeedMultiplier" }, // 3805678060
+		{ &Z_Construct_UFunction_AHeroPlayerState_GetPlayerAirControl, "GetPlayerAirControl" }, // 4066355969
+		{ &Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeight, "GetPlayerJumpHeight" }, // 1071563638
+		{ &Z_Construct_UFunction_AHeroPlayerState_GetPlayerJumpHeightMultiplier, "GetPlayerJumpHeightMultiplier" }, // 3863329146
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHeroPlayerState_Statics::Class_MetaDataParams[] = {
@@ -186,7 +316,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerState, 4059693339);
+	IMPLEMENT_CLASS(AHeroPlayerState, 1784966578);
 	template<> RPG_API UClass* StaticClass<AHeroPlayerState>()
 	{
 		return AHeroPlayerState::StaticClass();

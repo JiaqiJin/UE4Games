@@ -1,29 +1,16 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Unreal\ARPG).
-  Parsing headers for RPGEditor
-    Running UnrealHeaderTool "E:\Unreal\ARPG\RPG\RPG.uproject" "E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\RPGEditor\Development\RPGEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Usuario\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for RPGEditor in 3,6021086 seconds
   Building RPGEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 16 actions with 12 processes...
-    [1/16] RPG.init.gen.cpp
-    [2/16] HeroCharacterMovementComponent.gen.cpp
-    [3/16] RPGGameMode.cpp
-    [4/16] HeroCheatManager.cpp
-    [5/16] HeroCharacterMovementComponent.cpp
-    [6/16] HeroDebuggerCategory_Attributes.cpp
-    [7/16] HeroPlayerAttributeSet.cpp
-    [8/16] HeroPlayerState.cpp
-    [9/16] HeroPlayerAttributeSet.gen.cpp
-    [10/16] RPGCharacter.gen.cpp
-    [11/16] RPGCharacter.cpp
-    [12/16] UE4Editor-HeroDebugModule-0004.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0004.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0004.exp
-    [13/16] UE4Editor-RPG-0004.lib
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0004.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0004.exp
-    [14/16] UE4Editor-RPG-0004.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0004.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0004.suppressed.exp
-    [15/16] UE4Editor-HeroDebugModule-0004.dll
-       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0004.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0004.suppressed.exp
-    [16/16] RPGEditor.target
-  Total time in Parallel executor: 19,77 seconds
-  Total execution time: 24,55 seconds
+  Building 6 actions with 12 processes...
+    [1/6] UE4Editor-HeroDebugModule-0008.lib
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.exp
+    [2/6] HeroPlayerState.cpp
+    [3/6] UE4Editor-RPG-0008.lib
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.exp
+    [4/6] UE4Editor-RPG-0008.dll
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\UE4Editor-RPG-0008.suppressed.exp
+    [5/6] UE4Editor-HeroDebugModule-0008.dll
+       Creating library E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.suppressed.lib and object E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\HeroDebugModule\UE4Editor-HeroDebugModule-0008.suppressed.exp
+    [6/6] RPGEditor.target
+  Total time in Parallel executor: 5,51 seconds
+  Total execution time: 6,22 seconds
