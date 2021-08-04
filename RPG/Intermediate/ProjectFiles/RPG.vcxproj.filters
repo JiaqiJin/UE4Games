@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\RPG.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F0201D60-D57E-4B6F-843B-EE0A7FE6B411}</UniqueIdentifier>
+      <UniqueIdentifier>{28437A2D-214A-4133-8036-9B8F948AB00B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPG.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{2CE0E77D-B2D8-4CB7-B263-0E92050B2013}</UniqueIdentifier>
+      <UniqueIdentifier>{E7B90B91-58BF-4FD6-83BA-466575F23F3B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,13 +33,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\HeroDebugModule">
-      <UniqueIdentifier>{051E6ADB-6285-4E68-B1FC-4C0EFEE50F5A}</UniqueIdentifier>
+      <UniqueIdentifier>{C99AEB35-24FF-41D6-BF09-EBA96E2DAC71}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HeroDebugModule\HeroDebugModule.Build.cs">
       <Filter>Source\HeroDebugModule</Filter>
     </None>
     <Filter Include="Source\HeroDebugModule\Private">
-      <UniqueIdentifier>{0063D541-D76F-4484-868A-012BE3C363AA}</UniqueIdentifier>
+      <UniqueIdentifier>{90831064-0EC3-408D-8F51-736A1B6003C4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\HeroDebugModule\Private\HeroDebuggerCategory_Attributes.cpp">
       <Filter>Source\HeroDebugModule\Private</Filter>
@@ -51,7 +51,7 @@
       <Filter>Source\HeroDebugModule\Private</Filter>
     </ClCompile>
     <Filter Include="Source\HeroDebugModule\Public">
-      <UniqueIdentifier>{9A6841B8-ECB0-43DE-BD9F-10D843AB5648}</UniqueIdentifier>
+      <UniqueIdentifier>{D2233165-D717-4319-B351-D4813A4C57C2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\HeroDebugModule\Public\HeroDebuggerCategory_Attributes.h">
       <Filter>Source\HeroDebugModule\Public</Filter>
@@ -63,7 +63,7 @@
       <Filter>Source\HeroDebugModule\Public</Filter>
     </ClInclude>
     <Filter Include="Source\RPG">
-      <UniqueIdentifier>{4C830493-4EA4-47E1-BBDE-65164B0AA0F0}</UniqueIdentifier>
+      <UniqueIdentifier>{64D1E7B5-B104-4A04-B43A-9E0B1BF063F6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPG\RPG.Build.cs">
       <Filter>Source\RPG</Filter>
@@ -87,10 +87,10 @@
       <Filter>Source\RPG</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Abilities">
-      <UniqueIdentifier>{C29AAACF-2FA5-48E0-8AD0-28F554C77B42}</UniqueIdentifier>
+      <UniqueIdentifier>{C4C440F4-3770-4BA5-8A41-631B8BF8D87C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\RPG\Abilities\Jump">
-      <UniqueIdentifier>{8DE5F274-10F8-4D72-8A9D-E15E0C55C577}</UniqueIdentifier>
+      <UniqueIdentifier>{78B474BC-965E-4411-8392-803C3AC15F11}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Abilities\Jump\HeroGameplayAbility_Jump.cpp">
       <Filter>Source\RPG\Abilities\Jump</Filter>
@@ -99,7 +99,7 @@
       <Filter>Source\RPG\Abilities\Jump</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Attributes">
-      <UniqueIdentifier>{4003651E-AADF-407F-8F88-10D8463115FC}</UniqueIdentifier>
+      <UniqueIdentifier>{2B1E04D5-DBA7-4C73-B2CB-E0726DA089E8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Attributes\HeroPlayerAttributeSet.cpp">
       <Filter>Source\RPG\Attributes</Filter>
@@ -108,7 +108,7 @@
       <Filter>Source\RPG\Attributes</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\CheatManager">
-      <UniqueIdentifier>{92BF77B4-8FC6-4EB3-B5D2-C463A5807974}</UniqueIdentifier>
+      <UniqueIdentifier>{6D35BC5F-6073-497D-B4B5-D4FFC65872E7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\CheatManager\HeroCheatManager.cpp">
       <Filter>Source\RPG\CheatManager</Filter>
@@ -117,7 +117,7 @@
       <Filter>Source\RPG\CheatManager</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Controller">
-      <UniqueIdentifier>{E4CA2FE3-646C-449A-BFA0-70C4CE73470C}</UniqueIdentifier>
+      <UniqueIdentifier>{63C53C86-BF94-487E-899C-E6398DF1B1E2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Controller\HeroCharacterMovementComponent.cpp">
       <Filter>Source\RPG\Controller</Filter>
@@ -132,7 +132,7 @@
       <Filter>Source\RPG\Controller</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\Data">
-      <UniqueIdentifier>{57E1C5CA-EC1F-4089-A28D-799B9A30E1B3}</UniqueIdentifier>
+      <UniqueIdentifier>{C49D18EC-7210-4748-819A-BB764ABE2042}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\Data\HeroAbilityDataAsset.cpp">
       <Filter>Source\RPG\Data</Filter>
@@ -141,7 +141,7 @@
       <Filter>Source\RPG\Data</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\GameMode">
-      <UniqueIdentifier>{D2F6C9A3-CEBE-40DD-A37C-E16D2829E826}</UniqueIdentifier>
+      <UniqueIdentifier>{8BFDEA20-706D-446B-A783-A5C327C7A68E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\GameMode\HeroPlayerGameModeBase.cpp">
       <Filter>Source\RPG\GameMode</Filter>
@@ -150,7 +150,7 @@
       <Filter>Source\RPG\GameMode</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\GameplayAbility">
-      <UniqueIdentifier>{E02D0124-3A59-4A7A-8655-65EB4AFAC2B5}</UniqueIdentifier>
+      <UniqueIdentifier>{47B3A8BD-5172-47D2-8D1F-F67D79150D09}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\GameplayAbility\HeroGameplayAbility.cpp">
       <Filter>Source\RPG\GameplayAbility</Filter>
@@ -159,7 +159,7 @@
       <Filter>Source\RPG\GameplayAbility</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\GameplayEffect">
-      <UniqueIdentifier>{56513283-03A7-422D-91DA-C452642956A5}</UniqueIdentifier>
+      <UniqueIdentifier>{2998C8A4-8C01-4E88-8CC9-85D88039436B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\GameplayEffect\HeroGameplayEffect.cpp">
       <Filter>Source\RPG\GameplayEffect</Filter>
@@ -168,7 +168,7 @@
       <Filter>Source\RPG\GameplayEffect</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\HUD">
-      <UniqueIdentifier>{5F4B5879-D87D-425A-A95B-B34C67862D84}</UniqueIdentifier>
+      <UniqueIdentifier>{E79AA4C0-053B-4032-A047-A38E60BA2BC0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\HUD\HeroPlayerHUD.cpp">
       <Filter>Source\RPG\HUD</Filter>
@@ -177,7 +177,7 @@
       <Filter>Source\RPG\HUD</Filter>
     </ClInclude>
     <Filter Include="Source\RPG\PlayerState">
-      <UniqueIdentifier>{DC40F716-ECA8-4AC6-9C5D-C481871CDDD8}</UniqueIdentifier>
+      <UniqueIdentifier>{CAFD3680-048E-4045-B0D6-3906030A72EF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPG\PlayerState\HeroPlayerState.cpp">
       <Filter>Source\RPG\PlayerState</Filter>

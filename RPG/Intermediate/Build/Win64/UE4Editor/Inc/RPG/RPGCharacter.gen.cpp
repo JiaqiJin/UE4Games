@@ -367,12 +367,12 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGCharacter_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "// https://github.com/tranek/GASDocumentation\n" },
+		{ "Comment", "// https://github.com/tranek/GASDocumentation\n// https://www.youtube.com/watch?v=Yub52f4ZUU0\n" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "RPGCharacter.h" },
 		{ "ModuleRelativePath", "RPGCharacter.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
-		{ "ToolTip", "https:github.com/tranek/GASDocumentation" },
+		{ "ToolTip", "https:github.com/tranek/GASDocumentation\nhttps:www.youtube.com/watch?v=Yub52f4ZUU0" },
 	};
 #endif
 #if WITH_METADATA
@@ -459,7 +459,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGCharacter, 3147603957);
+	IMPLEMENT_CLASS(ARPGCharacter, 2118560373);
 	template<> RPG_API UClass* StaticClass<ARPGCharacter>()
 	{
 		return ARPGCharacter::StaticClass();

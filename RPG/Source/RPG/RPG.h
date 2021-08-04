@@ -19,9 +19,13 @@ namespace EHeroAbilityInputID
 		Confirm			UMETA(DisplayName = "Confirm"),
 		// 2 Cancel RMB
 		Cancel			UMETA(DisplayName = "Cancel"),
-		// 3 NUM 1
+		// 4 NUM 1
 		Ability1		UMETA(DisplayName = "Ability1"),
-		// 4 Jump SpaceBar
+		// 5 NUM 3
+		Ability2		UMETA(DisplayName = "Ability2"),
+		// 6 NUM 3
+		Ability3		UMETA(DisplayName = "Ability3"),
+		// 7 Jump SpaceBar
 		Jump			UMETA(DisplayName = "Jump"),
 		// 8 Sprint
 		Sprint			UMETA(DisplayName = "Sprint"),

@@ -16,4 +16,12 @@ class RPG_API AHeroPlayerController : public APlayerController
 	
 public:
 	AHeroPlayerController(const class FObjectInitializer& InitializerObject);
+
+	void ShowHeroDebug();
+
+public:
+	UPROPERTY(EditAnywhere, Category = "Player|Debug")
+	TSubclassOf<class UUserWidget> HeroDebugMenu;
+
+	class UUserWidget* HeroDebugMenuWidget;
 };

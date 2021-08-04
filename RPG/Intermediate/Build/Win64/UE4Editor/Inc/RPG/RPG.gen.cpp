@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 		return EHeroAbilityInputID_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EHeroAbilityInputID(EHeroAbilityInputID_StaticEnum, TEXT("/Script/RPG"), TEXT("EHeroAbilityInputID"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 2062346261U; }
+	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 3599353193U; }
 	UEnum* Z_Construct_UEnum_RPG_EHeroAbilityInputID()
 	{
 #if WITH_HOT_RELOAD
@@ -46,15 +46,25 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "EHeroAbilityInputID::Confirm", (int64)EHeroAbilityInputID::Confirm },
 				{ "EHeroAbilityInputID::Cancel", (int64)EHeroAbilityInputID::Cancel },
 				{ "EHeroAbilityInputID::Ability1", (int64)EHeroAbilityInputID::Ability1 },
+				{ "EHeroAbilityInputID::Ability2", (int64)EHeroAbilityInputID::Ability2 },
+				{ "EHeroAbilityInputID::Ability3", (int64)EHeroAbilityInputID::Ability3 },
 				{ "EHeroAbilityInputID::Jump", (int64)EHeroAbilityInputID::Jump },
 				{ "EHeroAbilityInputID::Sprint", (int64)EHeroAbilityInputID::Sprint },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Ability1.Comment", "// 3 NUM 1\n" },
+				{ "Ability1.Comment", "// 4 NUM 1\n" },
 				{ "Ability1.DisplayName", "Ability1" },
 				{ "Ability1.Name", "EHeroAbilityInputID::Ability1" },
-				{ "Ability1.ToolTip", "3 NUM 1" },
+				{ "Ability1.ToolTip", "4 NUM 1" },
+				{ "Ability2.Comment", "// 5 NUM 3\n" },
+				{ "Ability2.DisplayName", "Ability2" },
+				{ "Ability2.Name", "EHeroAbilityInputID::Ability2" },
+				{ "Ability2.ToolTip", "5 NUM 3" },
+				{ "Ability3.Comment", "// 6 NUM 3\n" },
+				{ "Ability3.DisplayName", "Ability3" },
+				{ "Ability3.Name", "EHeroAbilityInputID::Ability3" },
+				{ "Ability3.ToolTip", "6 NUM 3" },
 				{ "BlueprintType", "true" },
 				{ "Cancel.Comment", "// 2 Cancel RMB\n" },
 				{ "Cancel.DisplayName", "Cancel" },
@@ -64,10 +74,10 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "Confirm.DisplayName", "Confirm" },
 				{ "Confirm.Name", "EHeroAbilityInputID::Confirm" },
 				{ "Confirm.ToolTip", "1 Confirm LMB" },
-				{ "Jump.Comment", "// 4 Jump SpaceBar\n" },
+				{ "Jump.Comment", "// 7 Jump SpaceBar\n" },
 				{ "Jump.DisplayName", "Jump" },
 				{ "Jump.Name", "EHeroAbilityInputID::Jump" },
-				{ "Jump.ToolTip", "4 Jump SpaceBar" },
+				{ "Jump.ToolTip", "7 Jump SpaceBar" },
 				{ "ModuleRelativePath", "RPG.h" },
 				{ "None.Comment", "// 0 None\n" },
 				{ "None.DisplayName", "None" },

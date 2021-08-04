@@ -11,7 +11,7 @@
 #include "RPG/Controller/HeroCharacterMovementComponent.h"
 #include "RPG/PlayerState/HeroPlayerState.h"
 #include "RPG/Attributes/HeroPlayerAttributeSet.h"
-
+#include "RPG/Controller/HeroPlayerController.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ARPGCharacter
@@ -198,13 +198,23 @@ void ARPGCharacter::GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilitie
 	{
 		if (!Ability.Ability)
 		{
-			UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid."), *FString(__FUNCTION__), *GetName());
+			UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid--."), *FString(__FUNCTION__), *GetName());
 			return;
 		}
 		else
 		{
 			AbilitySystemComponent->GiveAbility(Ability);
 		}
+	}
+}
+
+void ARPGCharacter::ShowHeroDebugMenu()
+{
+	AHeroPlayerController* PlayerController = Cast<AHeroPlayerController>(GetController());
+
+	if (PlayerController)
+	{
+		PlayerController->ShowHeroDebug();
 	}
 }
 
@@ -228,6 +238,9 @@ void ARPGCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindAxis("TurnRate", this, &ARPGCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ARPGCharacter::LookUpAtRate);
+
+	// Hero Debug Command L key
+	PlayerInputComponent->BindAction("HeroDebugMenu", IE_Pressed, this, &ARPGCharacter::ShowHeroDebugMenu);
 
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ARPGCharacter::TouchStarted);

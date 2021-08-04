@@ -22,6 +22,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(EHeroAbilityInputID::Confirm) \
 	op(EHeroAbilityInputID::Cancel) \
 	op(EHeroAbilityInputID::Ability1) \
+	op(EHeroAbilityInputID::Ability2) \
+	op(EHeroAbilityInputID::Ability3) \
 	op(EHeroAbilityInputID::Jump) \
 	op(EHeroAbilityInputID::Sprint) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

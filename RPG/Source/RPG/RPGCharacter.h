@@ -13,7 +13,7 @@
 #include "RPGCharacter.generated.h"
 
 // https://github.com/tranek/GASDocumentation
-
+// https://www.youtube.com/watch?v=Yub52f4ZUU0
 UCLASS()
 class ARPGCharacter : public ACharacter, public IAbilitySystemInterface
 {
@@ -115,5 +115,7 @@ protected:
 
 	void GrantAbilityToPlayer(FGameplayAbilitySpec Ability);
 	void GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities);
+
+	void ShowHeroDebugMenu();
 };
 
