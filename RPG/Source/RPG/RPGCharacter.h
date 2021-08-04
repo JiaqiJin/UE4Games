@@ -109,12 +109,7 @@ protected:
 	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
-	TSubclassOf<class UGameplayEffect> DefaultAttributesEffect;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Attributes")
 	UHeroAbilityDataAsset* DefaultAbilities;
-
-	void initializeDefaultAttributes();
 
 	void ApplyDefaultAbilities();
 

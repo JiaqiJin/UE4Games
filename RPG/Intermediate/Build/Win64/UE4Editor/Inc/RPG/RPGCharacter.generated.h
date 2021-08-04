@@ -83,7 +83,6 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARPGCharacter); \
 #define RPG_Source_RPG_RPGCharacter_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ARPGCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ARPGCharacter, FollowCamera); } \
-	FORCEINLINE static uint32 __PPO__DefaultAttributesEffect() { return STRUCT_OFFSET(ARPGCharacter, DefaultAttributesEffect); } \
 	FORCEINLINE static uint32 __PPO__DefaultAbilities() { return STRUCT_OFFSET(ARPGCharacter, DefaultAbilities); }
 
 

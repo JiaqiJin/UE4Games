@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{140B46B7-3C60-4358-A2CB-F30843AF6D65}</ProjectGuid>
+    <ProjectGuid>{EE617113-5D51-44F6-9941-E19EE82213FE}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>RPG</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>

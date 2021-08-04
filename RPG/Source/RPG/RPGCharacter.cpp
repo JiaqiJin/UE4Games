@@ -77,8 +77,6 @@ void ARPGCharacter::PossessedBy(AController* NewController)
 		PlayerAttributes = PS->GetAttributeSetBase();
 		PS->InitializeAttributes();
 
-		//initializeDefaultAttributes();
-
 		ApplyDefaultAbilities();
 
 		// Initialize character movement component on Possed + call SetNewJumpZVelocity and SetNewAirControl
@@ -90,31 +88,6 @@ void ARPGCharacter::PossessedBy(AController* NewController)
 			MovementComponent->SetNewJumpZVelocity(MovementComponent->JumpZVelocity);
 			MovementComponent->SetNewAirControl(MovementComponent->AirControl);
 		}
-	}
-}
-
-void ARPGCharacter::initializeDefaultAttributes()
-{
-	if (!AbilitySystemComponent.IsValid())
-	{
-		return;
-	}
-
-	if (!DefaultAttributesEffect)
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s() Missing DefaultAttributes for %s. Please fill in the character's Blueprint."), *FString(__FUNCTION__), *GetName());
-		return;
-	}
-
-	FGameplayEffectContextHandle EffectContext = AbilitySystemComponent->MakeEffectContext();
-	EffectContext.AddSourceObject(this);
-
-	// GameplayEffectSpecs are created from GameplayEffects using UAbilitySystemComponent::MakeOutgoingSpec() which is BlueprintCallable
-	FGameplayEffectSpecHandle NewHandle = AbilitySystemComponent->MakeOutgoingSpec(DefaultAttributesEffect, 0, EffectContext);
-	if (NewHandle.IsValid())
-	{
-		FActiveGameplayEffectHandle ActiveGEHandle =
-			AbilitySystemComponent->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystemComponent.Get());
 	}
 }
 

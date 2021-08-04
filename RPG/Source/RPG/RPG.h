@@ -22,12 +22,8 @@ namespace EHeroAbilityInputID
 		// 3 NUM 1
 		Ability1		UMETA(DisplayName = "Ability1"),
 		// 4 Jump SpaceBar
-		Jump			UMETA(DisplayName = "Jump")
-		/*
-			// 8 Sprint
-			Sprint			UMETA(DisplayName = "Sprint"),
-			// 9 Jump
-			Jump			UMETA(DisplayName = "Jump")
-		*/
+		Jump			UMETA(DisplayName = "Jump"),
+		// 8 Sprint
+		Sprint			UMETA(DisplayName = "Sprint"),
 	};
 }

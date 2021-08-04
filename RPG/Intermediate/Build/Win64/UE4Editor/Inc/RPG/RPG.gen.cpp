@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 		return EHeroAbilityInputID_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EHeroAbilityInputID(EHeroAbilityInputID_StaticEnum, TEXT("/Script/RPG"), TEXT("EHeroAbilityInputID"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 4088711758U; }
+	uint32 Get_Z_Construct_UEnum_RPG_EHeroAbilityInputID_Hash() { return 2062346261U; }
 	UEnum* Z_Construct_UEnum_RPG_EHeroAbilityInputID()
 	{
 #if WITH_HOT_RELOAD
@@ -47,6 +47,7 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "EHeroAbilityInputID::Cancel", (int64)EHeroAbilityInputID::Cancel },
 				{ "EHeroAbilityInputID::Ability1", (int64)EHeroAbilityInputID::Ability1 },
 				{ "EHeroAbilityInputID::Jump", (int64)EHeroAbilityInputID::Jump },
+				{ "EHeroAbilityInputID::Sprint", (int64)EHeroAbilityInputID::Sprint },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -72,6 +73,10 @@ void EmptyLinkFunctionForGeneratedCodeRPG() {}
 				{ "None.DisplayName", "None" },
 				{ "None.Name", "EHeroAbilityInputID::None" },
 				{ "None.ToolTip", "0 None" },
+				{ "Sprint.Comment", "// 8 Sprint\n" },
+				{ "Sprint.DisplayName", "Sprint" },
+				{ "Sprint.Name", "EHeroAbilityInputID::Sprint" },
+				{ "Sprint.ToolTip", "8 Sprint" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

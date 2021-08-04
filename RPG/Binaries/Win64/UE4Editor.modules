@@ -2,7 +2,7 @@
 	"BuildId": "14830424",
 	"Modules": 
 	{
-		"HeroDebugModule": "UE4Editor-HeroDebugModule-0016.dll",
-		"RPG": "UE4Editor-RPG-0016.dll"
+		"HeroDebugModule": "UE4Editor-HeroDebugModule-0001.dll",
+		"RPG": "UE4Editor-RPG-0001.dll"
 	}
 }
