@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerController() {}
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	UPackage* Z_Construct_UPackage__Script_RPG();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
+	RPG_API UClass* Z_Construct_UClass_UHeroDebugWidget_NoRegister();
 // End Cross Module References
 	void AHeroPlayerController::StaticRegisterNativesAHeroPlayerController()
 	{
@@ -60,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerController() {}
 		{ "ModuleRelativePath", "Controller/HeroPlayerController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu = { "HeroDebugMenu", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHeroPlayerController, HeroDebugMenu), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu = { "HeroDebugMenu", nullptr, (EPropertyFlags)0x0024080000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHeroPlayerController, HeroDebugMenu), Z_Construct_UClass_UHeroDebugWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHeroPlayerController_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHeroPlayerController_Statics::NewProp_HeroDebugMenu,
 	};
@@ -91,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerController, 2822191853);
+	IMPLEMENT_CLASS(AHeroPlayerController, 3428632608);
 	template<> RPG_API UClass* StaticClass<AHeroPlayerController>()
 	{
 		return AHeroPlayerController::StaticClass();

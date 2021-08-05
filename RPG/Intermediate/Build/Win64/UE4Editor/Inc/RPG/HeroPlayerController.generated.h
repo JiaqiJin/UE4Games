@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RPG_HeroPlayerController_generated_h
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_SPARSE_DATA
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_RPC_WRAPPERS
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_SPARSE_DATA
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_RPC_WRAPPERS
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAHeroPlayerController(); \
 	friend struct Z_Construct_UClass_AHeroPlayerController_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AHeroPlayerController)
 
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_INCLASS \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAHeroPlayerController(); \
 	friend struct Z_Construct_UClass_AHeroPlayerController_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AHeroPlayerController)
 
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_STANDARD_CONSTRUCTORS \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AHeroPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHeroPlayerController) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AHeroPlayerController(AHeroPlayerController&&); \
@@ -58,28 +58,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHeroPlayerController); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHeroPlayerController)
 
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_PRIVATE_PROPERTY_OFFSET
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_12_PROLOG
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_GENERATED_BODY_LEGACY \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__HeroDebugMenu() { return STRUCT_OFFSET(AHeroPlayerController, HeroDebugMenu); }
+
+
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_13_PROLOG
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_SPARSE_DATA \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_RPC_WRAPPERS \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_INCLASS \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_STANDARD_CONSTRUCTORS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_SPARSE_DATA \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_RPC_WRAPPERS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_INCLASS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RPG_Source_RPG_Controller_HeroPlayerController_h_15_GENERATED_BODY \
+#define RPG_Source_RPG_Controller_HeroPlayerController_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_PRIVATE_PROPERTY_OFFSET \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_SPARSE_DATA \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_INCLASS_NO_PURE_DECLS \
-	RPG_Source_RPG_Controller_HeroPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_PRIVATE_PROPERTY_OFFSET \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_SPARSE_DATA \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_INCLASS_NO_PURE_DECLS \
+	RPG_Source_RPG_Controller_HeroPlayerController_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

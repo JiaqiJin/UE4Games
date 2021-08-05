@@ -1,10 +1,6 @@
 E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Development\RPG\Definitions.RPG.h
 E:\Unreal\ARPG\RPG\Source\RPG\Controller\HeroPlayerController.h
-E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroPlayerController.generated.h
-E:\Unreal\ARPG\RPG\Source\RPG/CheatManager/HeroCheatManager.h
-E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CheatManager.h
-E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CheatManager.generated.h
-E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroCheatManager.generated.h
+E:\Unreal\ARPG\RPG\Source\RPG/UI/HeroDebugWidget.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
@@ -104,3 +100,9 @@ E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PropertyP
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroDebugWidget.generated.h
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroPlayerController.generated.h
+E:\Unreal\ARPG\RPG\Source\RPG/CheatManager/HeroCheatManager.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CheatManager.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CheatManager.generated.h
+E:\Unreal\ARPG\RPG\Intermediate\Build\Win64\UE4Editor\Inc\RPG\HeroCheatManager.generated.h

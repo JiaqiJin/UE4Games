@@ -5,6 +5,7 @@
 #include "RPG/CheatManager/HeroCheatManager.h"
 #include "Blueprint/UserWidget.h"
 #include "UObject/ConstructorHelpers.h"
+#include "RPG/UI/HeroDebugWidget.h"
 
 AHeroPlayerController::AHeroPlayerController(const class FObjectInitializer& InitializerObject) :
 	Super(InitializerObject)
@@ -19,23 +20,28 @@ AHeroPlayerController::AHeroPlayerController(const class FObjectInitializer& Ini
 	}
 
 	HeroDebugMenu = MainDebugWidget.Class;
-
+	if (!HeroDebugMenu)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() HeroDebugMenu are empty"), *FString(__FUNCTION__), *GetName());
+	}
 }
 
 
 void AHeroPlayerController::ShowHeroDebug()
 {
-	if (!HeroDebugMenu)
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s() ShowHeroDebug function"), *FString(__FUNCTION__), *GetName());
-	}
-
 	if (HeroDebugMenu)
 	{
-		HeroDebugMenuWidget = CreateWidget<UUserWidget>(GetGameInstance(), HeroDebugMenu);
+		HeroDebugMenuWidget = CreateWidget<UHeroDebugWidget>(GetGameInstance(), HeroDebugMenu);
 
-		HeroDebugMenuWidget->AddToViewport();
+		if (HeroDebugMenuWidget)
+		{
+			HeroDebugMenuWidget->AddToViewport();
+			bShowMouseCursor = true;
+			FInputModeUIOnly InputModeData;
+			InputModeData.SetWidgetToFocus(HeroDebugMenuWidget->TakeWidget());
+			InputModeData.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
 
-		bShowMouseCursor = true;
+			SetInputMode(InputModeData);
+		}
 	}
 }

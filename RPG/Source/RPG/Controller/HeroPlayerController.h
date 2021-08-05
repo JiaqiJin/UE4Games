@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "RPG/UI/HeroDebugWidget.h"
 #include "HeroPlayerController.generated.h"
 
 /**
@@ -19,9 +20,9 @@ public:
 
 	void ShowHeroDebug();
 
-public:
-	UPROPERTY(EditAnywhere, Category = "Player|Debug")
-	TSubclassOf<class UUserWidget> HeroDebugMenu;
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Debug")
+	TSubclassOf<class UHeroDebugWidget> HeroDebugMenu;
 
-	class UUserWidget* HeroDebugMenuWidget;
+	class UHeroDebugWidget* HeroDebugMenuWidget;
 };
