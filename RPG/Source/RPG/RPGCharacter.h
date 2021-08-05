@@ -102,6 +102,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
 	float GetAirControl() const;
 
+	FORCEINLINE class UHeroAbilityDataAsset* GetDefaultAbilityDataAssert() const { return DefaultAbilities; }
+
 protected:
 	// The core ActorComponent for interfacing with the GameplayAbilities System
 	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;

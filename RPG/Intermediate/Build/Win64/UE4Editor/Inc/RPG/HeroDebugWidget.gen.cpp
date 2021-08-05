@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroDebugWidget() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_RPG();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UComboBoxString_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UHeroDebugWidget::execCloseHeroDebugButton)
 	{
@@ -71,6 +72,10 @@ void EmptyLinkFunctionForGeneratedCodeHeroDebugWidget() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CloseButton_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CloseButton;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintKeyMapSelector_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SprintKeyMapSelector;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -87,6 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroDebugWidget() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "UI/HeroDebugWidget.h" },
 		{ "ModuleRelativePath", "UI/HeroDebugWidget.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -97,8 +103,17 @@ void EmptyLinkFunctionForGeneratedCodeHeroDebugWidget() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_CloseButton = { "CloseButton", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroDebugWidget, CloseButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_CloseButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_CloseButton_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_SprintKeyMapSelector_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/HeroDebugWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_SprintKeyMapSelector = { "SprintKeyMapSelector", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroDebugWidget, SprintKeyMapSelector), Z_Construct_UClass_UComboBoxString_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_SprintKeyMapSelector_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_SprintKeyMapSelector_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroDebugWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_CloseButton,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroDebugWidget_Statics::NewProp_SprintKeyMapSelector,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHeroDebugWidget_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UHeroDebugWidget>::IsAbstract,
@@ -127,7 +142,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroDebugWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroDebugWidget, 36168198);
+	IMPLEMENT_CLASS(UHeroDebugWidget, 1014164602);
 	template<> RPG_API UClass* StaticClass<UHeroDebugWidget>()
 	{
 		return UHeroDebugWidget::StaticClass();

@@ -5,6 +5,16 @@
 #include "Components/Button.h"
 #include "RPG/Controller/HeroPlayerController.h"
 #include "GameFramework/PlayerController.h"
+#include "RPG/RPGCharacter.h"
+#include "RPG/Controller/HeroPlayerController.h"
+#include "RPG/Data/HeroAbilityDataAsset.h"
+#include "Components/ComboBoxString.h"
+
+UHeroDebugWidget::UHeroDebugWidget(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
+{
+
+}
 
 bool UHeroDebugWidget::Initialize()
 {
@@ -18,6 +28,23 @@ bool UHeroDebugWidget::Initialize()
 	{
 		CloseButton->OnClicked.AddDynamic(this, &UHeroDebugWidget::CloseHeroDebugButton);
 	}
+
+	ARPGCharacter* HeroCharacter = Cast<ARPGCharacter>(GetOwningPlayerPawn());
+
+	if (HeroCharacter)
+	{
+		UHeroAbilityDataAsset* AbilityData = HeroCharacter->GetDefaultAbilityDataAssert();
+		if (AbilityData)
+		{
+			for (FHeroGameplayAbilityBindInfo AbilityInfo : AbilityData->Abilities)
+			{
+				SprintKeyMapSelector->AddOption(AbilityInfo.AbilityName.ToString());
+				//UE_LOG(LogTemp, Warning, TEXT("Success"));
+			}
+		}
+		UE_LOG(LogTemp, Warning, TEXT("Success"));
+	}
+
 	return true;
 }
 

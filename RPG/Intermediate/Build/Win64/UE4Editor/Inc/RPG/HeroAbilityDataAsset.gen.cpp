@@ -58,11 +58,16 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroAbilities_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_HeroAbilities;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilityName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_AbilityName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "Data/HeroAbilityDataAsset.h" },
 	};
 #endif
@@ -76,17 +81,25 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		{ "ModuleRelativePath", "Data/HeroAbilityDataAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command = { "Command", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FHeroGameplayAbilityBindInfo, Command), Z_Construct_UEnum_RPG_EHeroAbilityInputID, METADATA_PARAMS(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command = { "Command", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FHeroGameplayAbilityBindInfo, Command), Z_Construct_UEnum_RPG_EHeroAbilityInputID, METADATA_PARAMS(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities_MetaData[] = {
 		{ "Category", "HeroGameplayAbilityBindInfo" },
 		{ "ModuleRelativePath", "Data/HeroAbilityDataAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities = { "HeroAbilities", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FHeroGameplayAbilityBindInfo, HeroAbilities), Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities = { "HeroAbilities", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FHeroGameplayAbilityBindInfo, HeroAbilities), Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_AbilityName_MetaData[] = {
+		{ "Category", "HeroGameplayAbilityBindInfo" },
+		{ "ModuleRelativePath", "Data/HeroAbilityDataAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_AbilityName = { "AbilityName", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FHeroGameplayAbilityBindInfo, AbilityName), METADATA_PARAMS(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_AbilityName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_AbilityName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_Command,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_HeroAbilities,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::NewProp_AbilityName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_RPG,
@@ -116,7 +129,7 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Hash() { return 4266137225U; }
+	uint32 Get_Z_Construct_UScriptStruct_FHeroGameplayAbilityBindInfo_Hash() { return 2904089399U; }
 	void UHeroAbilityDataAsset::StaticRegisterNativesUHeroAbilityDataAsset()
 	{
 	}
@@ -160,7 +173,7 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		{ "ToolTip", "UHeroAbilityDataAsset(const class FObjectInitializer& InitializerObject);" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities = { "Abilities", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroAbilityDataAsset, Abilities), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities = { "Abilities", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroAbilityDataAsset, Abilities), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroAbilityDataAsset_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroAbilityDataAsset_Statics::NewProp_Abilities,
@@ -192,7 +205,7 @@ static struct FScriptStruct_RPG_StaticRegisterNativesFHeroGameplayAbilityBindInf
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroAbilityDataAsset, 3301068946);
+	IMPLEMENT_CLASS(UHeroAbilityDataAsset, 795824695);
 	template<> RPG_API UClass* StaticClass<UHeroAbilityDataAsset>()
 	{
 		return UHeroAbilityDataAsset::StaticClass();

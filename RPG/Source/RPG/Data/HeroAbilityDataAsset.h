@@ -11,16 +11,19 @@
 
 class UAbilitySystemComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FHeroGameplayAbilityBindInfo
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 	TEnumAsByte<EHeroAbilityInputID::Type> Command;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 	TSubclassOf<class UGameplayAbility> HeroAbilities;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+	FText AbilityName;
 };
 
 /*
@@ -34,7 +37,7 @@ class RPG_API UHeroAbilityDataAsset : public UDataAsset
 public:
 	//UHeroAbilityDataAsset(const class FObjectInitializer& InitializerObject);
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 	TArray<FHeroGameplayAbilityBindInfo> Abilities;
 
 	void GiveAbilities(UAbilitySystemComponent* AbilitySystemComponent) const;
