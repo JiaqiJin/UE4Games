@@ -17,7 +17,7 @@ void UHeroAbilityDataAsset::GiveAbilities(UAbilitySystemComponent* AbilitySystem
 		if (BindInfo.HeroAbilities)
 		{
 			AbilitySystemComponent->GiveAbility(
-				FGameplayAbilitySpec(BindInfo.HeroAbilities, 1, (int32)BindInfo.Command));
+				FGameplayAbilitySpec(BindInfo.HeroAbilities, 1, (int32)BindInfo.Command, AbilitySystemComponent->GetOwner()));
 		}
 	}
 }

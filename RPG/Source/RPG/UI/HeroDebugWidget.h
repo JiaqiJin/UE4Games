@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "RPG/Data/HeroAbilityDataAsset.h"
 #include "Components/ComboBoxString.h"
 #include "HeroDebugWidget.generated.h"
 
@@ -24,9 +25,29 @@ public:
 	class UButton* CloseButton;
 
 	UPROPERTY(meta = (BindWidget))
-	class UComboBoxString* SprintKeyMapSelector;
+	class UComboBoxString* Ability1Selector;
+
+	UPROPERTY(meta = (BindWidget))
+	class UComboBoxString* Ability2Selector;
+
+	UPROPERTY(meta = (BindWidget))
+	class UComboBoxString* Ability3Selector;
 
 private:
 	UFUNCTION()
 	void CloseHeroDebugButton();
+
+	UFUNCTION()
+	void Ability1Changed(FString SelectedItem, ESelectInfo::Type SelectionType);
+
+	UFUNCTION()
+	void Ability2Changed(FString SelectedItem, ESelectInfo::Type SelectionType);
+
+	UFUNCTION()
+	void Ability3Changed(FString SelectedItem, ESelectInfo::Type SelectionType);
+
+	UFUNCTION()
+	void RemapAbility(TEnumAsByte<EHeroAbilityInputID::Type> Command, FString SelectedItem, ESelectInfo::Type SelectionType);
+
+	void PopulateAbilityComboBox(class UComboBoxString& AbilitySelector);
 };
